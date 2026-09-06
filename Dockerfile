@@ -19,4 +19,4 @@ COPY --from=frontend-build /workspace/frontend/dist ./frontend_dist/
 WORKDIR /app/backend
 
 EXPOSE 7860
-CMD ["sh", "-c", "python -m scripts.seed_data && python -m scripts.embed_knowledge_base && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860} & app_pid=$!; (python -m scripts.seed_data && python -m scripts.embed_knowledge_base) || echo 'Background data initialization failed; API remains available'; wait $app_pid"]
