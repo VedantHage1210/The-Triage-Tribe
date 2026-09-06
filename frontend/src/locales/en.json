@@ -48,6 +48,18 @@
   },
   "result": {
     "snapshotComplete": "Your safety-first snapshot",
+    "assessmentLabel": "Safety-first assessment",
+    "reasoningLabel": "Why this result",
+    "confidence": "Confidence",
+    "decisionSource": "Decision source",
+    "safetyGuardrail": "Safety guardrail",
+    "groundedAI": "Grounded AI",
+    "processTitle": "How this assessment was built",
+    "process": {
+      "signal": "Symptoms understood",
+      "safety": "Safety checked",
+      "action": "Next step chosen"
+    },
     "nextSteps": "What to do next",
     "nextStepsEmergency": "Seek emergency care now. Do not drive yourself if you feel faint or unsafe.",
     "nextStepsUrgent": "Arrange a same-day medical review, especially if symptoms are worsening.",

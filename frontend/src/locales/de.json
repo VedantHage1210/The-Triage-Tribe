@@ -48,6 +48,18 @@
   },
   "result": {
     "snapshotComplete": "Ihr sicherheitsorientierter Schnappschuss",
+    "assessmentLabel": "Sicherheitsorientierte Einschätzung",
+    "reasoningLabel": "Warum dieses Ergebnis",
+    "confidence": "Konfidenz",
+    "decisionSource": "Entscheidungsquelle",
+    "safetyGuardrail": "Sicherheitsschutz",
+    "groundedAI": "Fundierte KI",
+    "processTitle": "So wurde die Einschätzung erstellt",
+    "process": {
+      "signal": "Symptome erfasst",
+      "safety": "Sicherheit geprüft",
+      "action": "Nächster Schritt gewählt"
+    },
     "nextSteps": "Nächste Schritte",
     "nextStepsEmergency": "Suchen Sie sofort Notfallhilfe. Fahren Sie nicht selbst, wenn Sie sich schwach oder unsicher fühlen.",
     "nextStepsUrgent": "Vereinbaren Sie noch heute eine ärztliche Untersuchung, besonders wenn die Beschwerden zunehmen.",
