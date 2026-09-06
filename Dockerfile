@@ -19,4 +19,4 @@ COPY --from=frontend-build /workspace/frontend/dist ./frontend_dist/
 WORKDIR /app/backend
 
 EXPOSE 7860
-CMD ["sh", "-c", "python -m scripts.seed_data && python -m scripts.embed_knowledge_base && uvicorn app.main:app --host 0.0.0.0 --port 7860"]
+CMD ["sh", "-c", "python -m scripts.seed_data && python -m scripts.embed_knowledge_base && uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]
