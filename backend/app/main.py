@@ -57,7 +57,12 @@ def on_startup():
     # Day 1 simplicity: create tables directly. Swap to Alembic migrations
     # (Section 2 tech stack) once the schema stabilizes past the first
     # few days, so schema changes are tracked properly.
-    Base.metadata.create_all(bind=engine)
+    try:
+        Base.metadata.create_all(bind=engine)
+    except Exception as exc:
+        # Keep the health endpoint available so deployment diagnostics can
+        # report a missing database configuration instead of timing out.
+        print(f"Database initialization skipped: {exc}")
 
 
 @app.get("/api/health")
