@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "appName": "Clinical Triage Assistant",
+    "language": "Language",
+    "howItWorks": "How it works"
+  },
+  "footer": {
+    "tagline": "Decision-support tool — not a substitute for professional medical advice."
+  },
+  "howItWorks": {
+    "title": "How this assistant works",
+    "subtitle": "This tool is built to be explainable, not a black box. Here's exactly what happens when you submit your symptoms.",
+    "step1Title": "1. Symptom extraction",
+    "step1Body": "The AI reads your description and pulls out structured symptoms, duration, and severity cues — in English or German.",
+    "step2Title": "2. Safety guardrail",
+    "step2Body": "A deterministic check runs first. If a known emergency keyword is detected, you get an instant Emergency result — no AI call, no delay.",
+    "step3Title": "3. Grounded reasoning",
+    "step3Body": "For everything else, the AI retrieves relevant reference conditions from a real medical knowledge base before reasoning — so its answer is tied to actual data, not guesswork.",
+    "step4Title": "4. Confidence & follow-up",
+    "step4Body": "If the AI isn't confident, it asks a clarifying question instead of guessing — a real back-and-forth, not a single-shot answer.",
+    "limitation": "No AI system can guarantee diagnostic accuracy. This tool is decision support, not a replacement for a licensed medical professional."
+  },
+  "landing": {
+    "chooseCategory": "What would you like to check?"
+  },
+  "triage": {
+    "inputPlaceholder": "Describe what you're experiencing...",
+    "snapshotTitle": "Build your symptom snapshot",
+    "snapshotSubtitle": "The more context you share, the safer and more useful the assessment.",
+    "quickPrompts": "Quick prompts",
+    "durationPrompt": "How long has it been going on?",
+    "severityPrompt": "How severe is it right now?",
+    "impactPrompt": "What does it stop you from doing?",
+    "voiceInput": "Speak",
+    "voiceListening": "Listening...",
+    "voiceUnsupported": "Voice input is not supported in this browser.",
+    "privacyNote": "Your draft stays on this device until you submit it.",
+    "snapshotReady": "Snapshot ready",
+    "snapshotProgress": "snapshot completeness",
+    "submit": "Get Assessment",
+    "analyzing": "Analyzing your symptoms...",
+    "answerFollowUp": "Please answer to continue",
+    "patientInfoTitle": "A few optional details (helps your report)",
+    "name": "Name",
+    "age": "Age",
+    "bloodGroup": "Blood Group",
+    "skipOptional": "Skip"
+  },
+  "result": {
+    "snapshotComplete": "Your safety-first snapshot",
+    "nextSteps": "What to do next",
+    "nextStepsEmergency": "Seek emergency care now. Do not drive yourself if you feel faint or unsafe.",
+    "nextStepsUrgent": "Arrange a same-day medical review, especially if symptoms are worsening.",
+    "nextStepsRoutine": "Book a clinician appointment and keep track of any changes.",
+    "nextStepsSelfCare": "Monitor your symptoms, rest, and seek care if they worsen or do not improve.",
+    "newAssessment": "Start a new assessment",
+    "matchedAgainst": "Matched against",
+    "recommendedAction": "Recommended action",
+    "downloadReport": "Download Report (PDF)",
+    "severity": {
+      "EMERGENCY": "Emergency",
+      "URGENT": "Urgent",
+      "ROUTINE": "Routine",
+      "SELF_CARE": "Self-care"
+    }
+  },
+  "visualCheck": {
+    "title": "Add a photo (optional)",
+    "upload": "Upload a photo",
+    "observationTitle": "AI Visual Observation — Not a Diagnosis",
+    "recommendCheck": "We recommend having this looked at by a professional."
+  },
+  "common": {
+    "back": "Back",
+    "loading": "Loading..."
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 2.5cm; }
+  body { font-family: Helvetica, sans-serif; color: #1E293B; font-size: 11pt; }
+  table { width: 100%; border-collapse: collapse; }
+  .header-table { border-bottom: 3px solid #0F766E; padding-bottom: 12px; margin-bottom: 20px; }
+  .app-name { font-size: 16pt; font-weight: bold; color: #0F766E; }
+  .meta { font-size: 9pt; color: #64748B; text-align: right; }
+  .section-title { font-size: 9pt; text-transform: uppercase; color: #64748B; margin-top: 18px; margin-bottom: 6px; }
+  .patient-label { font-size: 8pt; color: #94A3B8; }
+  .patient-value { font-size: 11pt; font-weight: bold; }
+  .severity-badge { padding: 6px 16px; color: white; font-weight: bold; font-size: 11pt; }
+  .sev-EMERGENCY { background-color: #DC2626; }
+  .sev-URGENT { background-color: #EA580C; }
+  .sev-ROUTINE { background-color: #CA8A04; }
+  .sev-SELF_CARE { background-color: #16A34A; }
+  .reasoning { line-height: 1.6; margin-top: 8px; }
+  .cited-chip { background-color: #F1F5F9; color: #334155; padding: 3px 10px; font-size: 9pt; margin-right: 6px; }
+  .observation-box { background-color: #F8FAFC; border: 1px solid #E2E8F0; padding: 12px; margin-top: 8px; }
+  .footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #E2E8F0; font-size: 8.5pt; color: #64748B; line-height: 1.5; }
+  .session-id { font-size: 8pt; color: #94A3B8; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <table class="header-table">
+    <tr>
+      <td class="app-name">{{ app_name }}</td>
+      <td class="meta">{{ report_date }}<br/>{{ labels.session_ref }}: {{ session_id_short }}</td>
+    </tr>
+  </table>
+
+  <div class="section-title">{{ labels.patient_info }}</div>
+  <table>
+    <tr>
+      <td width="25%">
+        <div class="patient-label">{{ labels.name }}</div>
+        <div class="patient-value">{{ patient_name or "-" }}</div>
+      </td>
+      <td width="25%">
+        <div class="patient-label">{{ labels.age }}</div>
+        <div class="patient-value">{{ patient_age or "-" }}</div>
+      </td>
+      <td width="25%">
+        <div class="patient-label">{{ labels.blood_group }}</div>
+        <div class="patient-value">{{ patient_blood_group or "-" }}</div>
+      </td>
+      <td width="25%">
+        <div class="patient-label">{{ labels.category }}</div>
+        <div class="patient-value">{{ category or "-" }}</div>
+      </td>
+    </tr>
+  </table>
+
+  <div class="section-title">{{ labels.assessment_result }}</div>
+  <table>
+    <tr>
+      <td class="severity-badge sev-{{ severity }}">{{ severity_label }}</td>
+    </tr>
+  </table>
+  <p class="reasoning">{{ reasoning }}</p>
+
+  {% if cited_conditions %}
+  <div class="section-title">{{ labels.matched_against }}</div>
+  <p>
+    {% for c in cited_conditions %}
+    <span class="cited-chip">{{ c }}</span>
+    {% endfor %}
+  </p>
+  {% endif %}
+
+  <div class="section-title">{{ labels.recommended_action }}</div>
+  <p>{{ recommended_action }}</p>
+
+  {% if visual_observation %}
+  <div class="section-title">{{ labels.visual_observation }}</div>
+  <div class="observation-box">
+    <p><b>{{ labels.not_a_diagnosis }}</b></p>
+    <p>{{ visual_observation.general_note }}</p>
+  </div>
+  {% endif %}
+
+  <div class="footer">
+    {{ labels.disclaimer }}
+    <div class="session-id">{{ labels.session_ref }}: {{ session_id_full }}</div>
+  </div>
+</body>
+</html>

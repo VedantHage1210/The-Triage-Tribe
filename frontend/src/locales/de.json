@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "appName": "Klinischer Triage-Assistent",
+    "language": "Sprache",
+    "howItWorks": "So funktioniert es"
+  },
+  "footer": {
+    "tagline": "Entscheidungsunterstützungstool — kein Ersatz für professionellen medizinischen Rat."
+  },
+  "howItWorks": {
+    "title": "So funktioniert dieser Assistent",
+    "subtitle": "Dieses Tool ist erklärbar aufgebaut, keine Blackbox. Hier ist genau, was passiert, wenn Sie Ihre Symptome übermitteln.",
+    "step1Title": "1. Symptomextraktion",
+    "step1Body": "Die KI liest Ihre Beschreibung und extrahiert strukturierte Symptome, Dauer und Schweregrad-Hinweise — auf Englisch oder Deutsch.",
+    "step2Title": "2. Sicherheits-Schutzschicht",
+    "step2Body": "Zuerst läuft eine deterministische Prüfung. Wird ein bekanntes Notfall-Schlüsselwort erkannt, erhalten Sie sofort ein Notfall-Ergebnis — ohne KI-Aufruf, ohne Verzögerung.",
+    "step3Title": "3. Fundierte Argumentation",
+    "step3Body": "Für alles andere ruft die KI relevante Referenzerkrankungen aus einer echten medizinischen Wissensdatenbank ab, bevor sie argumentiert — die Antwort basiert also auf echten Daten, nicht auf Vermutungen.",
+    "step4Title": "4. Konfidenz & Rückfragen",
+    "step4Body": "Ist sich die KI nicht sicher, stellt sie eine klärende Rückfrage, statt zu raten — ein echter Dialog, keine Einmalantwort.",
+    "limitation": "Kein KI-System kann diagnostische Genauigkeit garantieren. Dieses Tool bietet Entscheidungsunterstützung und ersetzt keinen zugelassenen Arzt."
+  },
+  "landing": {
+    "chooseCategory": "Was möchten Sie überprüfen?"
+  },
+  "triage": {
+    "inputPlaceholder": "Beschreiben Sie, was Sie erleben...",
+    "snapshotTitle": "Erstellen Sie Ihren Symptom-Schnappschuss",
+    "snapshotSubtitle": "Je mehr Kontext Sie teilen, desto sicherer und hilfreicher ist die Einschätzung.",
+    "quickPrompts": "Schnellangaben",
+    "durationPrompt": "Wie lange besteht es schon?",
+    "severityPrompt": "Wie stark ist es gerade?",
+    "impactPrompt": "Woran hindert es Sie?",
+    "voiceInput": "Sprechen",
+    "voiceListening": "Hört zu...",
+    "voiceUnsupported": "Spracheingabe wird in diesem Browser nicht unterstützt.",
+    "privacyNote": "Ihr Entwurf bleibt bis zum Absenden auf diesem Gerät.",
+    "snapshotReady": "Schnappschuss bereit",
+    "snapshotProgress": "Vollständigkeit",
+    "submit": "Bewertung erhalten",
+    "analyzing": "Ihre Symptome werden analysiert...",
+    "answerFollowUp": "Bitte antworten Sie, um fortzufahren",
+    "patientInfoTitle": "Ein paar optionale Angaben (hilft für Ihren Bericht)",
+    "name": "Name",
+    "age": "Alter",
+    "bloodGroup": "Blutgruppe",
+    "skipOptional": "Überspringen"
+  },
+  "result": {
+    "snapshotComplete": "Ihr sicherheitsorientierter Schnappschuss",
+    "nextSteps": "Nächste Schritte",
+    "nextStepsEmergency": "Suchen Sie sofort Notfallhilfe. Fahren Sie nicht selbst, wenn Sie sich schwach oder unsicher fühlen.",
+    "nextStepsUrgent": "Vereinbaren Sie noch heute eine ärztliche Untersuchung, besonders wenn die Beschwerden zunehmen.",
+    "nextStepsRoutine": "Vereinbaren Sie einen Arzttermin und beobachten Sie Veränderungen.",
+    "nextStepsSelfCare": "Beobachten Sie die Beschwerden, schonen Sie sich und suchen Sie Hilfe, wenn sie schlimmer werden.",
+    "newAssessment": "Neue Einschätzung starten",
+    "matchedAgainst": "Abgeglichen mit",
+    "recommendedAction": "Empfohlene Maßnahme",
+    "downloadReport": "Bericht herunterladen (PDF)",
+    "severity": {
+      "EMERGENCY": "Notfall",
+      "URGENT": "Dringend",
+      "ROUTINE": "Routine",
+      "SELF_CARE": "Selbstpflege"
+    }
+  },
+  "visualCheck": {
+    "title": "Foto hinzufügen (optional)",
+    "upload": "Foto hochladen",
+    "observationTitle": "KI-Sichtbeobachtung — Keine Diagnose",
+    "recommendCheck": "Wir empfehlen, dies von einem Facharzt untersuchen zu lassen."
+  },
+  "common": {
+    "back": "Zurück",
+    "loading": "Wird geladen..."
+  }
+}
