@@ -21,7 +21,37 @@
     "limitation": "Kein KI-System kann diagnostische Genauigkeit garantieren. Dieses Tool bietet Entscheidungsunterstützung und ersetzt keinen zugelassenen Arzt."
   },
   "landing": {
-    "chooseCategory": "Was möchten Sie überprüfen?"
+    "chooseCategory": "Was möchten Sie überprüfen?",
+    "safetySimulator": {
+      "eyebrow": "Sicherheitslabor",
+      "title": "Schutzschicht live erleben",
+      "subtitle": "Testen Sie ein Warnsignal. Die deterministische Sicherheitsschicht erkennt Gefahr vor einer KI-Antwort.",
+      "prompt": "Wählen Sie ein Szenario für die Sicherheitsprüfung.",
+      "detected": "Notfallsignal erkannt",
+      "note": "Dieser Simulator dient nur zur Demonstration. Bei echten Beschwerden ist professionelle medizinische Hilfe erforderlich.",
+      "steps": {
+        "input": "Signal empfangen",
+        "guardrail": "Sicherheit geprüft",
+        "action": "Dringende Maßnahme"
+      },
+      "scenarios": {
+        "cardiac": {
+          "title": "Brustschmerzen",
+          "symptoms": "Schmerz + Atemnot",
+          "result": "Sofort Notfallhilfe suchen"
+        },
+        "stroke": {
+          "title": "Schlaganfallzeichen",
+          "symptoms": "Gesichtslähmung + Schwäche",
+          "result": "Sofort den Notruf wählen"
+        },
+        "allergy": {
+          "title": "Schwere Allergie",
+          "symptoms": "Schwellung + Atemprobleme",
+          "result": "Als medizinischen Notfall behandeln"
+        }
+      }
+    }
   },
   "triage": {
     "inputPlaceholder": "Beschreiben Sie, was Sie erleben...",

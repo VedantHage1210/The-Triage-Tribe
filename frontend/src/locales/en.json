@@ -21,7 +21,37 @@
     "limitation": "No AI system can guarantee diagnostic accuracy. This tool is decision support, not a replacement for a licensed medical professional."
   },
   "landing": {
-    "chooseCategory": "What would you like to check?"
+    "chooseCategory": "What would you like to check?",
+    "safetySimulator": {
+      "eyebrow": "Safety lab",
+      "title": "See the guardrail in action",
+      "subtitle": "Try a red-flag scenario. The deterministic safety layer recognizes danger before an AI answer is generated.",
+      "prompt": "Select a scenario to run the safety check.",
+      "detected": "Emergency signal detected",
+      "note": "This simulator is for demonstration only. Real symptoms require professional medical care.",
+      "steps": {
+        "input": "Signal received",
+        "guardrail": "Safety checked",
+        "action": "Urgent action"
+      },
+      "scenarios": {
+        "cardiac": {
+          "title": "Chest pain",
+          "symptoms": "Pain + breathlessness",
+          "result": "Seek emergency care now"
+        },
+        "stroke": {
+          "title": "Stroke signs",
+          "symptoms": "Face drooping + weakness",
+          "result": "Call emergency services immediately"
+        },
+        "allergy": {
+          "title": "Severe allergy",
+          "symptoms": "Swelling + trouble breathing",
+          "result": "Treat as a medical emergency"
+        }
+      }
+    }
   },
   "triage": {
     "inputPlaceholder": "Describe what you're experiencing...",

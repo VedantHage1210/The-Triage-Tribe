@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import DisclaimerBanner from "../components/DisclaimerBanner";
 import Hero3D from "../components/Hero3D";
+import EmergencySafetySimulator from "../components/EmergencySafetySimulator";
 
 // Section 12.2 — one small, medical-appropriate icon per category,
 // no generic tech iconography.
@@ -55,6 +56,8 @@ export default function CategoryGridPage() {
             </button>
           ))}
         </div>
+
+        <EmergencySafetySimulator />
       </main>
 
       <Footer />
