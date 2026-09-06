@@ -22,6 +22,16 @@
   },
   "landing": {
     "chooseCategory": "Was möchten Sie überprüfen?",
+    "heroEyebrow": "Klinische Entscheidungsunterstützung",
+    "heroTitle": "Erkennen, was jetzt Aufmerksamkeit braucht.",
+    "heroBody": "Beschreiben Sie Ihre Beschwerden und erhalten Sie eine sicherheitsorientierte Einschätzung auf Basis medizinischer Referenzdaten. Bei Unsicherheit fragt der Assistent nach, Warnsignale werden sofort eskaliert.",
+    "categoryEyebrow": "Mit einem Anliegen beginnen",
+    "categorySubtitle": "Wählen Sie den Bereich, der am besten zu Ihren Beschwerden passt.",
+    "trust": {
+      "safety": "Sicherheitsprüfung zuerst",
+      "evidence": "Fundierte Quellen",
+      "privacy": "Bilder werden nicht gespeichert"
+    },
     "safetySimulator": {
       "eyebrow": "Sicherheitslabor",
       "title": "Schutzschicht live erleben",

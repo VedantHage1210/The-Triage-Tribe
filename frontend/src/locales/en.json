@@ -22,6 +22,16 @@
   },
   "landing": {
     "chooseCategory": "What would you like to check?",
+    "heroEyebrow": "Clinical decision support",
+    "heroTitle": "Know what needs attention next.",
+    "heroBody": "Describe what you are experiencing and get a safety-first assessment grounded in medical reference data. The assistant asks when it needs more context and escalates red flags immediately.",
+    "categoryEyebrow": "Start with a concern",
+    "categorySubtitle": "Choose the area that best matches what you are experiencing.",
+    "trust": {
+      "safety": "Safety checks first",
+      "evidence": "Evidence grounded",
+      "privacy": "Images not stored"
+    },
     "safetySimulator": {
       "eyebrow": "Safety lab",
       "title": "See the guardrail in action",
