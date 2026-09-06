@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from pathlib import Path
 
 from app.api import (
     admin_auth,
@@ -44,6 +47,10 @@ app.include_router(admin_content.router)
 app.include_router(admin_sessions.router)
 app.include_router(admin_knowledge_base.router)
 
+FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend_dist"
+if (FRONTEND_DIST / "assets").exists():
+    app.mount("/assets", StaticFiles(directory=FRONTEND_DIST / "assets"), name="assets")
+
 
 @app.on_event("startup")
 def on_startup():
@@ -56,3 +63,12 @@ def on_startup():
 @app.get("/api/health")
 def health_check():
     return {"status": "ok"}
+
+
+@app.get("/{full_path:path}")
+def serve_frontend(full_path: str):
+    """Serve the built patient app when running as a single Docker Space."""
+    requested_file = FRONTEND_DIST / full_path
+    if full_path and requested_file.is_file():
+        return FileResponse(requested_file)
+    return FileResponse(FRONTEND_DIST / "index.html")
