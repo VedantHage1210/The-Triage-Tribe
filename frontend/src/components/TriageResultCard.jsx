@@ -92,7 +92,7 @@ export default function TriageResultCard({ result }) {
           </div>
         </div>
 
-        <a href={reportDownloadUrl(result.session_id, language)} className="text-center bg-clinical-teal text-white rounded-xl py-3 mt-2 hover:opacity-90 transition font-medium">
+        <a href={reportDownloadUrl(result.session_id, language, result.report_token)} className="text-center bg-clinical-teal text-white rounded-xl py-3 mt-2 hover:opacity-90 transition font-medium">
           {t("result.downloadReport")}
         </a>
       </div>

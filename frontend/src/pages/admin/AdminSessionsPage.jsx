@@ -41,7 +41,7 @@ export default function AdminSessionsPage() {
                 <td className="p-3">{s.patient_name || "—"}</td>
                 <td className="p-3">
                   <a
-                    href={reportDownloadUrl(s.id, s.language)}
+                    href={reportDownloadUrl(s.id, s.language, s.report_token)}
                     className="text-clinical-teal text-xs"
                   >
                     PDF

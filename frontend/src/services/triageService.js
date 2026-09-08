@@ -41,7 +41,7 @@ export async function submitVisualCheck({ sessionId, category, language, file })
   return data;
 }
 
-export function reportDownloadUrl(sessionId, lang) {
+export function reportDownloadUrl(sessionId, lang, reportToken) {
   const base = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
-  return `${base}/triage/${sessionId}/report.pdf?lang=${lang}`;
+  return `${base}/triage/${sessionId}/report.pdf?lang=${lang}&token=${encodeURIComponent(reportToken)}`;
 }

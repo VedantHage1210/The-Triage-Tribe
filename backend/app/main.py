@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
+from sqlalchemy import text
 
 from app.api import (
     admin_auth,
@@ -21,6 +22,7 @@ from app.db.base import Base
 from app.db.session import engine
 
 settings = get_settings()
+settings.validate()
 
 app = FastAPI(
     title="AI-Powered Clinical Triage Assistant",
@@ -35,6 +37,17 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.middleware("http")
+async def security_headers(request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    if settings.ENVIRONMENT.lower() in {"production", "prod"}:
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    return response
 
 app.include_router(triage.router)
 app.include_router(visual_check.router)
@@ -57,17 +70,23 @@ def on_startup():
     # Day 1 simplicity: create tables directly. Swap to Alembic migrations
     # (Section 2 tech stack) once the schema stabilizes past the first
     # few days, so schema changes are tracked properly.
-    try:
-        Base.metadata.create_all(bind=engine)
-    except Exception as exc:
-        # Keep the health endpoint available so deployment diagnostics can
-        # report a missing database configuration instead of timing out.
-        print(f"Database initialization skipped: {exc}")
+    if settings.AUTO_CREATE_TABLES:
+        try:
+            Base.metadata.create_all(bind=engine)
+        except Exception as exc:
+            # Keep the health endpoint available so deployment diagnostics can
+            # report a missing database configuration instead of timing out.
+            print(f"Database initialization skipped: {exc}")
 
 
 @app.get("/api/health")
 def health_check():
-    return {"status": "ok"}
+    try:
+        with engine.connect() as connection:
+            connection.execute(text("SELECT 1"))
+        return {"status": "ok", "database": "ok"}
+    except Exception:
+        return {"status": "degraded", "database": "unavailable"}
 
 
 @app.get("/{full_path:path}")

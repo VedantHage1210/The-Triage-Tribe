@@ -19,11 +19,11 @@ class Severity(str, Enum):
 class TriageRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=2000)
     language: str = Field(default="en", pattern="^(en|de)$")
-    category: Optional[str] = None
+    category: Optional[str] = Field(default=None, max_length=64)
     session_id: Optional[UUID] = None  # present when answering a follow-up round
-    patient_name: Optional[str] = None
+    patient_name: Optional[str] = Field(default=None, max_length=120)
     patient_age: Optional[int] = Field(default=None, ge=0, le=130)
-    patient_blood_group: Optional[str] = None
+    patient_blood_group: Optional[str] = Field(default=None, max_length=8)
 
 
 class ExtractedSymptoms(BaseModel):
@@ -55,6 +55,7 @@ class TriageResponse(BaseModel):
     needs_follow_up: bool
     triggered_by: str  # "guardrail" | "llm"
     language: str
+    report_token: str
 
 
 class VisualCheckResult(BaseModel):

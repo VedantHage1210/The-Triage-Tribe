@@ -19,16 +19,17 @@ bilingual (EN/DE) patient app, PDF reports, scoped image observation
 - ✅ Image-based visual observation — scoped to eyes/skin only, qualitative
   language only, never a percentage or diagnosis (Section 10.1 hard rule).
 - ✅ Admin panel: JWT login, symptom CRUD (bilingual fields), UI content
-  editor (bilingual, one save = both languages), knowledge base browser
-  (read-only), session log with PDF links.
+  editor (bilingual, one save = both languages), knowledge base CRUD,
+  session log with signed PDF links.
+- ✅ Security hardening: signed short-lived report access, production config
+  validation, security headers, stronger bilingual red-flag matching, and
+  explicit urgent fallback when the AI service is unavailable.
 - ✅ Seed script + embedding script + first-admin-user script.
 
 ## What's NOT yet built
-- ⬜ Alembic migrations (using `create_all` for simplicity — swap once the
-  schema stabilizes, per Section 2).
-- ⬜ Full CRUD (not just read) for knowledge_base in the admin UI — Section
-  20 stretch goal. Today, edit `scripts/seed_data.py` and re-run
-  `scripts/embed_knowledge_base.py` to update the RAG source data.
+- ⬜ Knowledge-base admin form and automatic re-embedding after edits. The
+  protected CRUD API is available; vector embeddings still need to be rebuilt
+  after content changes.
 - ⬜ Teeth/other-category image support — intentionally out of scope for
   v1 (Section 1.4).
 
@@ -43,6 +44,7 @@ pip install -r requirements.txt
 
 cp .env.example .env            # fill in DATABASE_URL and LLM_API_KEY
 # Make sure Postgres is running and the DB exists, e.g.: createdb triage_db
+alembic upgrade head
 
 uvicorn app.main:app --reload --port 8000
 ```

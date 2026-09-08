@@ -1,11 +1,12 @@
 import logging
 from uuid import UUID
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from fastapi.responses import Response
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
+from app.core.security import create_report_token, verify_report_token
 from app.models.models import TriageSession, VisualAssessment
 from app.schemas.triage_schema import Severity, TriageRequest, TriageResponse
 from app.services.guardrail import check_red_flags
@@ -23,6 +24,10 @@ FALLBACK_MESSAGE = {
     "de": "Wir konnten die KI-Bewertung gerade nicht abschließen. Bitte wenden Sie sich "
           "an einen Arzt, wenn Ihre Symptome Sie beunruhigen, oder versuchen Sie es "
           "in Kürze erneut.",
+}
+FALLBACK_ACTION = {
+    "en": "The AI assessment is unavailable. For concerning, worsening, or severe symptoms, seek urgent medical review now. Call emergency services for life-threatening symptoms.",
+    "de": "Die KI-Bewertung ist nicht verfügbar. Bei beunruhigenden, zunehmenden oder starken Beschwerden suchen Sie bitte umgehend ärztliche Hilfe. Bei lebensbedrohlichen Symptomen rufen Sie den Notdienst.",
 }
 
 
@@ -76,6 +81,7 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
             needs_follow_up=False,
             triggered_by="guardrail",
             language=payload.language,
+            report_token=create_report_token(session_row.id),
         )
 
     # --- Steps A + B (+ C loop is driven by the frontend re-calling this
@@ -84,6 +90,7 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
         result, extracted, retrieved = run_triage_pipeline(
             text=payload.text,
             language=payload.language,
+            report_token=create_report_token(session_row.id),
             category=payload.category,
             db=db,
             conversation_context=conversation_context,
@@ -141,16 +148,16 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
             )
             db.add(session_row)
 
-        session_row.severity_result = Severity.ROUTINE.value
+        session_row.severity_result = Severity.URGENT.value
         session_row.ai_reasoning = "AI assessment unavailable; showing a safe default."
-        session_row.recommended_action = FALLBACK_MESSAGE.get(payload.language, FALLBACK_MESSAGE["en"])
+        session_row.recommended_action = FALLBACK_ACTION.get(payload.language, FALLBACK_ACTION["en"])
         session_row.triggered_by = "fallback"
         db.commit()
         db.refresh(session_row)
 
         return TriageResponse(
             session_id=session_row.id,
-            severity=Severity.ROUTINE,
+            severity=Severity.URGENT,
             confidence=0.0,
             reasoning=session_row.ai_reasoning,
             recommended_action=session_row.recommended_action,
@@ -159,16 +166,25 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
             needs_follow_up=False,
             triggered_by="fallback",
             language=payload.language,
+            report_token=create_report_token(session_row.id),
         )
 
 
 @router.get("/triage/{session_id}/report.pdf")
-def download_report(session_id: UUID, lang: str = "en", db: Session = Depends(get_db)):
+def download_report(
+    session_id: UUID,
+    lang: str = "en",
+    token: str = Query(..., min_length=20),
+    db: Session = Depends(get_db),
+):
     """
     Section 11.3 — generates the PDF on demand from stored session data.
     Includes the visual observation (Section 10) if one exists for this
     session, so eyes/skin sessions get a fuller report.
     """
+    if not verify_report_token(token, session_id):
+        raise HTTPException(status_code=403, detail="Invalid or expired report access token")
+
     session = db.get(TriageSession, session_id)
     if not session:
         raise HTTPException(status_code=404, detail="Session not found")

@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 from sqlalchemy.orm import Session
 
 from app.db.session import get_db
-from app.models.models import VisualAssessment
+from app.models.models import TriageSession, VisualAssessment
 from app.schemas.triage_schema import VisualCheckResult
 from app.services.vision_service import analyze_image
 
@@ -37,6 +37,12 @@ async def visual_check(
             status_code=400,
             detail=f"Visual observation is only available for: {', '.join(ALLOWED_CATEGORIES)}",
         )
+
+    session = db.get(TriageSession, session_id)
+    if not session or session.category != category:
+        raise HTTPException(status_code=404, detail="Triage session not found")
+    if language not in {"en", "de"}:
+        raise HTTPException(status_code=400, detail="Unsupported language")
 
     if image.content_type not in ALLOWED_CONTENT_TYPES:
         raise HTTPException(status_code=400, detail="Unsupported image type. Use JPEG, PNG, or WEBP.")

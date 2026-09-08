@@ -54,4 +54,18 @@ export async function fetchKnowledgeBase() {
   return data;
 }
 
+export async function createKnowledgeBase(payload) {
+  const { data } = await adminApi.post("/admin/knowledge-base", payload);
+  return data;
+}
+
+export async function updateKnowledgeBase(id, payload) {
+  const { data } = await adminApi.put(`/admin/knowledge-base/${id}`, payload);
+  return data;
+}
+
+export async function deleteKnowledgeBase(id) {
+  await adminApi.delete(`/admin/knowledge-base/${id}`);
+}
+
 export default adminApi;

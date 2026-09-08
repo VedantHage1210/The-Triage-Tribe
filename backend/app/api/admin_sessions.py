@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from app.core.security import get_current_admin_email
+from app.core.security import create_report_token, get_current_admin_email
 from app.db.session import get_db
 from app.models.models import TriageSession
 
@@ -30,6 +30,7 @@ def list_sessions(limit: int = 50, db: Session = Depends(get_db)):
             "triggered_by": r.triggered_by,
             "patient_name": r.patient_name,
             "created_at": r.created_at.isoformat() if r.created_at else None,
+            "report_token": create_report_token(r.id),
         }
         for r in rows
     ]
