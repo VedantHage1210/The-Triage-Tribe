@@ -24,6 +24,7 @@ export default function TriageResultCard({ result }) {
   }[result.severity] || "Routine";
   const confidence = Math.round((result.confidence || 0) * 100);
   const isGuardrail = result.triggered_by === "guardrail";
+  const isFallback = result.triggered_by === "fallback";
 
   return (
     <div className="w-full max-w-md mx-auto flex flex-col gap-4">
@@ -45,7 +46,7 @@ export default function TriageResultCard({ result }) {
           </div>
           <div className="rounded-2xl bg-white/10 p-3">
             <p className="text-[11px] uppercase tracking-wide text-slate-300">{t("result.decisionSource")}</p>
-            <p className="text-sm font-semibold mt-2">{isGuardrail ? t("result.safetyGuardrail") : t("result.groundedAI")}</p>
+            <p className="text-sm font-semibold mt-2">{isGuardrail ? t("result.safetyGuardrail") : isFallback ? t("result.fallbackSource") : t("result.groundedAI")}</p>
           </div>
         </div>
       </div>

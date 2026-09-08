@@ -4,14 +4,13 @@ Copy .env.example to .env and fill in real values before running.
 """
 import os
 from functools import lru_cache
+from pathlib import Path
 
 from dotenv import load_dotenv
 
-# Load variables from a .env file in the backend/ directory into the
-# process environment. Without this call, os.getenv() below would only
-# ever see real OS-level environment variables, never anything from .env
-# — which is why editing .env alone wasn't taking effect.
-load_dotenv()
+# Resolve the env file from this module's location so startup is independent
+# of the directory from which Uvicorn is launched.
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 
 class Settings:

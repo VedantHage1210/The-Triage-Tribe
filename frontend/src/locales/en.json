@@ -94,6 +94,7 @@
     "decisionSource": "Decision source",
     "safetyGuardrail": "Safety guardrail",
     "groundedAI": "Grounded AI",
+    "fallbackSource": "AI unavailable",
     "processTitle": "How this assessment was built",
     "process": {
       "signal": "Symptoms understood",

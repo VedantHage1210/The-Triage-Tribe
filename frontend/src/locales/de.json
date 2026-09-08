@@ -94,6 +94,7 @@
     "decisionSource": "Entscheidungsquelle",
     "safetyGuardrail": "Sicherheitsschutz",
     "groundedAI": "Fundierte KI",
+    "fallbackSource": "KI nicht verfügbar",
     "processTitle": "So wurde die Einschätzung erstellt",
     "process": {
       "signal": "Symptome erfasst",
