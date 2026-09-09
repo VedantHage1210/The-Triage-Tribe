@@ -14,8 +14,21 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from xhtml2pdf import pisa
 
+from app.api.categories import CATEGORIES
+
 TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "templates"
 env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+
+CATEGORY_LOOKUP = {c["code"]: c for c in CATEGORIES}
+
+
+def _category_label(category_code: str | None, lang: str) -> str | None:
+    if not category_code:
+        return None
+    entry = CATEGORY_LOOKUP.get(category_code)
+    if not entry:
+        return category_code  # unknown code — show raw value rather than hide it
+    return entry["label_de"] if lang == "de" else entry["label_en"]
 
 LABELS = {
     "en": {
@@ -78,7 +91,7 @@ def generate_triage_report_pdf(session, lang: str = "en", visual_observation: di
         patient_name=session.patient_name,
         patient_age=session.patient_age,
         patient_blood_group=session.patient_blood_group,
-        category=session.category,
+        category=_category_label(session.category, lang),
         severity=session.severity_result or "ROUTINE",
         severity_label=SEVERITY_LABELS.get(lang, SEVERITY_LABELS["en"]).get(
             session.severity_result or "ROUTINE", session.severity_result
