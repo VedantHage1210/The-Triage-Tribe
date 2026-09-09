@@ -90,7 +90,6 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
         result, extracted, retrieved = run_triage_pipeline(
             text=payload.text,
             language=payload.language,
-            report_token=create_report_token(session_row.id),
             category=payload.category,
             db=db,
             conversation_context=conversation_context,
@@ -133,6 +132,7 @@ def submit_triage(payload: TriageRequest, db: Session = Depends(get_db)):
             needs_follow_up=follow_up_needed,
             triggered_by="llm",
             language=payload.language,
+            report_token=create_report_token(session_row.id),
         )
 
     except Exception:
