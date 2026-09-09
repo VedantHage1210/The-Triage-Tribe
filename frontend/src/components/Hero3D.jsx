@@ -129,5 +129,5 @@ export default function Hero3D({ height = 280 }) {
     };
   }, [height]);
 
-  return <div ref={mountRef} style={{ width: "100%", height, cursor: "grab" }} />;
+  return <div ref={mountRef} style={{ width: "100%", height, cursor: "grab", touchAction: "none" }} />;
 }
