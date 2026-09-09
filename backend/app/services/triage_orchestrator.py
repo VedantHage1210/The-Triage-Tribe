@@ -45,29 +45,33 @@ Rules:
   contradict it without strong justification.
 - If ANY life-threatening symptom is plausible, choose EMERGENCY.
 - Cite which retrieved condition(s) most influenced your classification.
-- Always explain your reasoning in 2-3 plain sentences, in {language}.
-- Always include a "recommended_action" in {language}, drawing from the
-  retrieved guidance where relevant.
+- The "reasoning" and "recommended_action" fields MUST be written entirely
+  in {language_name}. Do not mix in English words or sentences, even if the
+  retrieved reference data below is in English — translate any concepts you
+  draw from it into {language_name}.
 - Provide a "confidence" score 0.0-1.0.
 - If confidence < 0.6, propose up to 2 targeted clarifying questions instead
-  of finalizing.
+  of finalizing, also written entirely in {language_name}.
 - Never provide a diagnosis or medication dosage.
 
 Output strict JSON only, matching this schema:
-{
+{{
   "severity": "EMERGENCY|URGENT|ROUTINE|SELF_CARE",
   "confidence": 0.0,
   "reasoning": "string",
   "recommended_action": "string",
   "cited_conditions": ["string", ...],
   "follow_up_questions": ["string", "string"]
-}"""
+}}"""
+
+LANGUAGE_NAMES = {"en": "English", "de": "German"}
 
 
 def classify_with_grounding(
     extracted: ExtractedSymptoms, retrieved_context: list[dict], language: str
 ) -> TriageResult:
-    system_prompt = CLASSIFICATION_SYSTEM_PROMPT.replace("{language}", language)
+    language_name = LANGUAGE_NAMES.get(language, "English")
+    system_prompt = CLASSIFICATION_SYSTEM_PROMPT.format(language_name=language_name)
     user_message = (
         f"Extracted patient data: {extracted.model_dump_json()}\n"
         f"Retrieved reference conditions: {retrieved_context}"
