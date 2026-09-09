@@ -14,6 +14,7 @@ export default function AdminSessionsPage() {
       <h1 className="text-xl font-semibold text-ink mb-4">Triage Sessions</h1>
 
       <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead className="bg-slate-50 text-slate-500 text-left">
             <tr>
@@ -51,6 +52,7 @@ export default function AdminSessionsPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );
