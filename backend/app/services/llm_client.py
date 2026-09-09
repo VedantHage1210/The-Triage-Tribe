@@ -45,16 +45,23 @@ class LLMClient:
         """
         Google AI Studio / Gemini — genuinely free tier, no credit card
         required (as of writing). Useful for building/testing the project
-        without any spend. Model default: gemini-1.5-flash.
-        """
-        import google.generativeai as genai
+        without any spend.
 
-        genai.configure(api_key=self.api_key)
-        model = genai.GenerativeModel(
-            model_name=self.model,
-            system_instruction=system_prompt,
+        NOTE: this uses the current `google-genai` SDK. The older
+        `google.generativeai` package (genai.configure / GenerativeModel)
+        was deprecated by Google in 2025 and is no longer reliable against
+        current models — that was the cause of every triage call silently
+        falling back to the "AI unavailable" safe default in production.
+        """
+        from google import genai
+        from google.genai import types
+
+        client = genai.Client(api_key=self.api_key)
+        response = client.models.generate_content(
+            model=self.model,
+            contents=user_message,
+            config=types.GenerateContentConfig(system_instruction=system_prompt),
         )
-        response = model.generate_content(user_message)
         return response.text
 
     def get_json_completion(self, system_prompt: str, user_message: str) -> dict[str, Any]:
