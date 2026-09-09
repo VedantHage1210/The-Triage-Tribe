@@ -26,19 +26,21 @@ export default function Header() {
   const { t } = useTranslation();
 
   return (
-    <header className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-white/60 backdrop-blur-sm sticky top-0 z-10">
-      <Link to="/" className="flex items-center gap-2">
+    <header className="flex items-center justify-between gap-2 px-4 sm:px-6 py-4 border-b border-slate-100 bg-white/60 backdrop-blur-sm sticky top-0 z-10">
+      <Link to="/" className="flex items-center gap-2 min-w-0 shrink">
         <LogoMark />
-        <span className="text-lg font-semibold text-ink">{t("nav.appName")}</span>
+        <span className="text-base sm:text-lg font-semibold text-ink truncate">{t("nav.appName")}</span>
       </Link>
 
-      <nav className="hidden sm:flex items-center gap-5 text-sm text-slate-500">
+      <nav className="hidden sm:flex items-center gap-5 text-sm text-slate-500 shrink-0">
         <Link to="/how-it-works" className="hover:text-clinical-teal transition">
           {t("nav.howItWorks", "How it works")}
         </Link>
       </nav>
 
-      <LanguageSwitcher />
+      <div className="shrink-0">
+        <LanguageSwitcher />
+      </div>
     </header>
   );
 }
