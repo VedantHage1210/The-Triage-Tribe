@@ -8,7 +8,7 @@ export default function AdminBilingualField({ label, valueEn, valueDe, onChangeE
   const InputTag = multiline ? "textarea" : "input";
 
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       <div>
         <label className="text-xs text-slate-500 mb-1 block">{label} (EN)</label>
         <InputTag
