@@ -111,6 +111,7 @@ export default function AdminSymptomsPage() {
       </form>
 
       <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead className="bg-slate-50 text-slate-500 text-left">
             <tr>
@@ -142,6 +143,7 @@ export default function AdminSymptomsPage() {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );
