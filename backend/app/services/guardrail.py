@@ -34,12 +34,22 @@ DEFAULT_RED_FLAG_TERMS = {
 }
 
 
+def _normalize(text: str) -> str:
+    normalized = re.sub(r"[^\w\s]", " ", text.casefold())
+    return re.sub(r"\s+", " ", normalized).strip()
+
+
 def contains_red_flag_terms(text: str, terms: list[str]) -> bool:
-    normalized_text = re.sub(r"[^\w\s]", " ", text.casefold())
-    normalized_text = re.sub(r"\s+", " ", normalized_text).strip()
+    normalized_text = _normalize(text)
     return any(
-        re.search(rf"\b{re.escape(term.casefold())}\b", normalized_text)
+        # The term must go through the SAME normalization as the input
+        # text. Without this, a term like "can't breathe" (apostrophe
+        # intact) can never match normalized user text ("can t breathe",
+        # apostrophe stripped) — this was silently swallowing one of the
+        # most important emergency phrases in the entire guardrail list.
+        re.search(rf"\b{re.escape(_normalize(term))}\b", normalized_text)
         for term in terms
+        if _normalize(term)
     )
 
 
