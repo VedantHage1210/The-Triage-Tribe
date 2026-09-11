@@ -39,6 +39,8 @@ LABELS = {
         "blood_group": "Blood Group",
         "category": "Category",
         "assessment_result": "Assessment Result",
+        "confidence": "Confidence",
+        "decision_source": "Decision Source",
         "matched_against": "Matched Against (Reference Conditions)",
         "recommended_action": "Recommended Action",
         "visual_observation": "AI Visual Observation",
@@ -56,6 +58,8 @@ LABELS = {
         "blood_group": "Blutgruppe",
         "category": "Kategorie",
         "assessment_result": "Bewertungsergebnis",
+        "confidence": "Konfidenz",
+        "decision_source": "Entscheidungsquelle",
         "matched_against": "Abgeglichen mit (Referenzerkrankungen)",
         "recommended_action": "Empfohlene Maßnahme",
         "visual_observation": "KI-Sichtbeobachtung",
@@ -71,6 +75,11 @@ LABELS = {
 SEVERITY_LABELS = {
     "en": {"EMERGENCY": "Emergency", "URGENT": "Urgent", "ROUTINE": "Routine", "SELF_CARE": "Self-care"},
     "de": {"EMERGENCY": "Notfall", "URGENT": "Dringend", "ROUTINE": "Routine", "SELF_CARE": "Selbstpflege"},
+}
+
+DECISION_SOURCE_LABELS = {
+    "en": {"guardrail": "Safety Guardrail", "llm": "Grounded AI", "fallback": "AI Unavailable — Safe Default"},
+    "de": {"guardrail": "Sicherheits-Prüfung", "llm": "Fundierte KI", "fallback": "KI nicht verfügbar — sicherer Standard"},
 }
 
 
@@ -99,6 +108,10 @@ def generate_triage_report_pdf(session, lang: str = "en", visual_observation: di
         reasoning=session.ai_reasoning,
         cited_conditions=session.cited_conditions or [],
         recommended_action=session.recommended_action,
+        confidence_pct=round((session.confidence_score or 0.0) * 100),
+        decision_source=DECISION_SOURCE_LABELS.get(lang, DECISION_SOURCE_LABELS["en"]).get(
+            session.triggered_by or "llm", session.triggered_by
+        ),
         visual_observation=visual_observation,
         labels=labels,
     )
