@@ -3,25 +3,59 @@
 <head>
 <meta charset="utf-8">
 <style>
-  @page { size: A4; margin: 2.5cm; }
-  body { font-family: Helvetica, sans-serif; color: #1E293B; font-size: 11pt; }
+  /*
+    xhtml2pdf (ReportLab-based) only reliably supports a CSS2.1-ish
+    subset: table layout, basic borders/backgrounds, border-left accents.
+    No flexbox, no CSS grid, no box-shadow, no custom @font-face — those
+    either silently no-op or can break rendering entirely. Everything
+    below sticks to that safe subset intentionally, and the confidence
+    meter is built with two table cells (a technique that predates CSS
+    and still works reliably in PDF renderers) rather than a div width.
+  */
+  @page { size: A4; margin: 2.2cm; }
+  body { font-family: Helvetica, sans-serif; color: #14201F; font-size: 10.5pt; }
   table { width: 100%; border-collapse: collapse; }
-  .header-table { border-bottom: 3px solid #0F766E; padding-bottom: 12px; margin-bottom: 20px; }
-  .app-name { font-size: 16pt; font-weight: bold; color: #0F766E; }
-  .meta { font-size: 9pt; color: #64748B; text-align: right; }
-  .section-title { font-size: 9pt; text-transform: uppercase; color: #64748B; margin-top: 18px; margin-bottom: 6px; }
+
+  .header-table { border-bottom: 2px solid #14201F; padding-bottom: 10px; margin-bottom: 22px; }
+  .app-name { font-size: 14pt; font-weight: bold; color: #14201F; }
+  .meta { font-size: 8.5pt; color: #64748B; text-align: right; }
+
+  .section-title { font-size: 8pt; text-transform: uppercase; color: #64748B; margin-top: 16px; margin-bottom: 6px; }
   .patient-label { font-size: 8pt; color: #94A3B8; }
-  .patient-value { font-size: 11pt; font-weight: bold; }
-  .severity-badge { padding: 6px 16px; color: white; font-weight: bold; font-size: 11pt; }
-  .sev-EMERGENCY { background-color: #DC2626; }
-  .sev-URGENT { background-color: #EA580C; }
-  .sev-ROUTINE { background-color: #CA8A04; }
-  .sev-SELF_CARE { background-color: #16A34A; }
-  .reasoning { line-height: 1.6; margin-top: 8px; }
-  .cited-chip { background-color: #F1F5F9; color: #334155; padding: 3px 10px; font-size: 9pt; margin-right: 6px; }
+  .patient-value { font-size: 10.5pt; font-weight: bold; }
+
+  /* Result band — the one deliberately bold moment on the page, echoing
+     the in-app result card: a single severity statement, a real
+     confidence meter, and a quiet decision-source line underneath. */
+  .result-band { border: 1px solid #E2E8F0; padding: 14px 16px; margin-top: 6px; }
+  .result-label { font-size: 8pt; color: #64748B; text-transform: uppercase; }
+  .severity-text { font-size: 22pt; font-weight: bold; margin: 2px 0 10px 0; }
+  .sev-EMERGENCY { color: #DC2626; }
+  .sev-URGENT { color: #EA580C; }
+  .sev-ROUTINE { color: #CA8A04; }
+  .sev-SELF_CARE { color: #16A34A; }
+
+  .meter-row { font-size: 8.5pt; color: #64748B; }
+  .meter-value { font-size: 9pt; font-weight: bold; text-align: right; }
+  .meter-track { height: 5px; }
+  .meter-track td { padding: 0; }
+  .meter-fill-EMERGENCY { background-color: #DC2626; }
+  .meter-fill-URGENT { background-color: #EA580C; }
+  .meter-fill-ROUTINE { background-color: #CA8A04; }
+  .meter-fill-SELF_CARE { background-color: #16A34A; }
+  .meter-empty { background-color: #E2E8F0; }
+  .decision-source { font-size: 8.5pt; color: #64748B; margin-top: 8px; }
+
+  .reasoning { line-height: 1.6; margin-top: 10px; padding-left: 10px; border-left: 2px solid #CBD5C9; }
+  .matched-list { font-size: 9.5pt; color: #475569; }
+
+  .action-box { background-color: #F4F7F6; padding: 12px 14px; margin-top: 6px; }
+  .action-label { font-size: 8pt; color: #64748B; text-transform: uppercase; margin-bottom: 3px; }
+  .action-text { font-size: 10.5pt; font-weight: bold; }
+
   .observation-box { background-color: #F8FAFC; border: 1px solid #E2E8F0; padding: 12px; margin-top: 8px; }
-  .footer { margin-top: 30px; padding-top: 12px; border-top: 1px solid #E2E8F0; font-size: 8.5pt; color: #64748B; line-height: 1.5; }
-  .session-id { font-size: 8pt; color: #94A3B8; margin-top: 4px; }
+  .footer { margin-top: 26px; padding-top: 10px; border-top: 1px solid #E2E8F0; font-size: 8pt; color: #64748B; line-height: 1.5; }
+  .session-id { font-size: 7.5pt; color: #94A3B8; margin-top: 4px; }
 </style>
 </head>
 <body>
@@ -55,24 +89,36 @@
   </table>
 
   <div class="section-title">{{ labels.assessment_result }}</div>
-  <table>
-    <tr>
-      <td class="severity-badge sev-{{ severity }}">{{ severity_label }}</td>
-    </tr>
-  </table>
+  <div class="result-band">
+    <div class="severity-text sev-{{ severity }}">{{ severity_label }}</div>
+
+    <table class="meter-row">
+      <tr>
+        <td>{{ labels.confidence }}</td>
+        <td class="meter-value">{{ confidence_pct }}%</td>
+      </tr>
+    </table>
+    <table class="meter-track">
+      <tr>
+        <td width="{{ confidence_pct }}%" class="meter-fill-{{ severity }}">&nbsp;</td>
+        <td width="{{ 100 - confidence_pct }}%" class="meter-empty">&nbsp;</td>
+      </tr>
+    </table>
+
+    <div class="decision-source">{{ labels.decision_source }} — <b>{{ decision_source }}</b></div>
+  </div>
+
   <p class="reasoning">{{ reasoning }}</p>
 
   {% if cited_conditions %}
   <div class="section-title">{{ labels.matched_against }}</div>
-  <p>
-    {% for c in cited_conditions %}
-    <span class="cited-chip">{{ c }}</span>
-    {% endfor %}
-  </p>
+  <p class="matched-list">{{ cited_conditions | join(" · ") }}</p>
   {% endif %}
 
   <div class="section-title">{{ labels.recommended_action }}</div>
-  <p>{{ recommended_action }}</p>
+  <div class="action-box">
+    <div class="action-text">{{ recommended_action }}</div>
+  </div>
 
   {% if visual_observation %}
   <div class="section-title">{{ labels.visual_observation }}</div>
