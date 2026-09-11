@@ -14,8 +14,9 @@ from sqlalchemy.orm import Session
 
 from app.models.models import Symptom
 
-# Fallback in-memory list used only if the DB has no red-flag symptoms seeded
-# yet — keeps the guardrail functional from day one, before Day 2 seeding.
+# Colloquial patient phrasing, checked ALONGSIDE the DB-managed symptom
+# list (not instead of it) — the DB holds one canonical clinical label per
+# symptom (e.g. "Shortness of breath"), which real patients rarely type.
 DEFAULT_RED_FLAG_TERMS = {
     "en": [
         "chest pain", "can't breathe", "cannot breathe", "difficulty breathing",
@@ -56,22 +57,30 @@ def contains_red_flag_terms(text: str, terms: list[str]) -> bool:
 def check_red_flags(text: str, language: str, db: Session) -> bool:
     """
     Returns True if the input text matches a known red-flag symptom.
-    Checks the DB-managed symptom list first (admin-editable), falls back
-    to the hardcoded list above if the DB has nothing seeded yet.
+
+    Checks BOTH sources, not "DB, else fallback":
+      - DB-managed symptom labels (admin-editable, one canonical clinical
+        term per symptom, e.g. "Shortness of breath")
+      - The hardcoded colloquial phrase list below (the actual wording
+        patients use, e.g. "can't breathe", "trouble breathing")
+
+    These previously were treated as either/or: as soon as the DB had
+    ANY red-flag symptoms seeded, the colloquial list was skipped
+    entirely — meaning a patient typing "can't breathe" was never
+    caught, because the DB only had the clinical label "Shortness of
+    breath", not that phrase. Checking both closes that gap.
     """
     db_red_flags = (
         db.query(Symptom)
         .filter(Symptom.red_flag == True)  # noqa: E712
         .all()
     )
+    db_labels = [
+        (symptom.label_de if language == "de" and symptom.label_de else symptom.label_en)
+        for symptom in db_red_flags
+    ]
+    if contains_red_flag_terms(text, [label for label in db_labels if label]):
+        return True
 
-    if db_red_flags:
-        for symptom in db_red_flags:
-            label = symptom.label_de if language == "de" and symptom.label_de else symptom.label_en
-            if label and contains_red_flag_terms(text, [label]):
-                return True
-        return False
-
-    # DB not seeded yet — use the hardcoded fallback list
-    terms = DEFAULT_RED_FLAG_TERMS.get(language, DEFAULT_RED_FLAG_TERMS["en"])
-    return contains_red_flag_terms(text, terms)
+    fallback_terms = DEFAULT_RED_FLAG_TERMS.get(language, DEFAULT_RED_FLAG_TERMS["en"])
+    return contains_red_flag_terms(text, fallback_terms)
