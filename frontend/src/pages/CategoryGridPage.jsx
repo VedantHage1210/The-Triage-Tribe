@@ -8,19 +8,7 @@ import Footer from "../components/Footer";
 import DisclaimerBanner from "../components/DisclaimerBanner";
 import Hero3D from "../components/Hero3D";
 import EmergencySafetySimulator from "../components/EmergencySafetySimulator";
-
-// Section 12.2 — one small, medical-appropriate icon per category,
-// no generic tech iconography.
-const CATEGORY_ICONS = {
-  eyes: "👁",
-  skin: "🖐",
-  teeth: "🦷",
-  heart: "❤",
-  digestion: "🫃",
-  diabetes: "🩸",
-  weight: "⚖",
-  general: "＋",
-};
+import CategoryIcon from "../components/CategoryIcon";
 
 export default function CategoryGridPage() {
   const { t } = useTranslation();
@@ -38,18 +26,27 @@ export default function CategoryGridPage() {
       <Header />
 
       <main className="flex-1 flex flex-col items-center px-6 py-8">
-        <section className="w-full max-w-5xl rounded-[2rem] bg-gradient-to-br from-teal-50 via-white to-blue-50 border border-white shadow-sm px-6 py-8 sm:px-10 sm:py-10 grid md:grid-cols-[1.05fr_0.95fr] items-center gap-6 overflow-hidden">
+        <section className="w-full max-w-5xl rounded-2xl bg-white border border-slate-200 px-6 py-8 sm:px-10 sm:py-10 grid md:grid-cols-[1.05fr_0.95fr] items-center gap-6">
           <div className="order-2 md:order-1">
-            <p className="text-xs uppercase tracking-[0.2em] text-clinical-teal font-semibold mb-3">{t("landing.heroEyebrow")}</p>
+            <p className="text-[13px] text-clinical-teal font-medium mb-3">{t("landing.heroEyebrow")}</p>
             <h1 className="text-3xl sm:text-5xl font-semibold tracking-tight text-ink max-w-xl">{t("landing.heroTitle")}</h1>
             <p className="text-slate-600 leading-relaxed mt-4 max-w-lg">{t("landing.heroBody")}</p>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {["safety", "evidence", "privacy"].map((item) => (
-                <span key={item} className="rounded-full bg-white/80 border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-700">
-                  {t(`landing.trust.${item}`)}
-                </span>
-              ))}
-            </div>
+            {/* Concrete mechanics, not vague trust badges — each line names
+                an actual thing this system does, not a marketing word. */}
+            <ul className="mt-6 flex flex-col gap-2 text-sm text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="text-clinical-teal mt-0.5">—</span>
+                {t("landing.trust.safety")}
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-clinical-teal mt-0.5">—</span>
+                {t("landing.trust.evidence")}
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-clinical-teal mt-0.5">—</span>
+                {t("landing.trust.privacy")}
+              </li>
+            </ul>
           </div>
           <div className="order-1 md:order-2 min-h-[220px] flex items-center justify-center">
             <Hero3D height={260} />
@@ -57,7 +54,7 @@ export default function CategoryGridPage() {
         </section>
 
         <div className="w-full max-w-2xl mt-12 mb-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-clinical-teal font-semibold mb-2">{t("landing.categoryEyebrow")}</p>
+          <p className="text-[13px] text-clinical-teal font-medium mb-2">{t("landing.categoryEyebrow")}</p>
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-ink">{t("landing.chooseCategory")}</h2>
           <p className="text-sm text-slate-500 mt-2">{t("landing.categorySubtitle")}</p>
         </div>
@@ -67,9 +64,9 @@ export default function CategoryGridPage() {
             <button
               key={cat.code}
               onClick={() => navigate(`/triage/${cat.code}`)}
-              className="bg-white border border-slate-200 rounded-xl p-5 flex flex-col items-center gap-2 hover:border-clinical-teal hover:shadow-md hover:-translate-y-0.5 transition-all"
+              className="bg-white border border-slate-200 rounded-xl p-5 flex flex-col items-center gap-2.5 hover:border-clinical-teal transition-colors"
             >
-              <span className="text-2xl">{CATEGORY_ICONS[cat.code] || "＋"}</span>
+              <CategoryIcon code={cat.code} className="w-6 h-6 text-clinical-teal" />
               <span className="text-ink font-medium text-center text-sm">
                 {language === "de" ? cat.label_de : cat.label_en}
               </span>
