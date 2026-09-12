@@ -45,10 +45,11 @@ Rules:
   contradict it without strong justification.
 - If ANY life-threatening symptom is plausible, choose EMERGENCY.
 - Cite which retrieved condition(s) most influenced your classification.
-- The "reasoning" and "recommended_action" fields MUST be written entirely
-  in {language_name}. Do not mix in English words or sentences, even if the
-  retrieved reference data below is in English — translate any concepts you
-  draw from it into {language_name}.
+- The "reasoning", "recommended_action", AND "cited_conditions" fields MUST
+  be written entirely in {language_name}. The reference condition names
+  below are stored in English only — translate them into {language_name}
+  when citing them, don't copy the English name verbatim. Do not mix in
+  English words or sentences anywhere in these fields.
 - Provide a "confidence" score 0.0-1.0.
 - If confidence < 0.6, propose up to 2 targeted clarifying questions instead
   of finalizing, also written entirely in {language_name}.
