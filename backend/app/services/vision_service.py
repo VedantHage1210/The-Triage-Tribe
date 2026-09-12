@@ -21,6 +21,10 @@ quality, or you cannot make a confident observation, say so explicitly rather
 than guessing. Write every field entirely in {language_name} — do not mix in
 English words or sentences.
 
+Keep each item in "visible_features" short — a 3-6 word phrase (e.g. "mild
+redness along the eyelid"), not a full sentence. Put any longer explanation
+in "general_note" instead.
+
 Output strict JSON only:
 {{
   "visible_features": ["string", ...],
