@@ -49,6 +49,11 @@ export async function fetchSessions() {
   return data;
 }
 
+export async function fetchStats() {
+  const { data } = await adminApi.get("/admin/stats");
+  return data;
+}
+
 export async function fetchKnowledgeBase() {
   const { data } = await adminApi.get("/admin/knowledge-base");
   return data;
