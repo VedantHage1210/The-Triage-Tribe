@@ -57,14 +57,14 @@ export default function HowItWorksPage() {
                 {i + 1}
               </div>
               <div>
-                <h2 className="font-medium text-ink mb-1">{s.title}</h2>
+                <h2 className="font-medium text-ink mb-1">{s.title.replace(/^\d+\.\s*/, "")}</h2>
                 <p className="text-sm text-slate-600 leading-relaxed">{s.body}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-white border border-slate-200 rounded-xl p-5 text-sm text-slate-600">
+        <div className="mt-12 bg-bg-paper rounded-xl p-5 text-sm text-slate-600">
           {t(
             "howItWorks.limitation",
             "No AI system can guarantee diagnostic accuracy. This tool is decision support, not a replacement for a licensed medical professional."
