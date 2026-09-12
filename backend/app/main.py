@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
+from slowapi import _rate_limit_exceeded_handler
+from slowapi.errors import RateLimitExceeded
 from sqlalchemy import text
 
 from app.api import (
@@ -10,6 +12,7 @@ from app.api import (
     admin_content,
     admin_knowledge_base,
     admin_sessions,
+    admin_stats,
     admin_symptoms,
     categories,
     content,
@@ -18,6 +21,7 @@ from app.api import (
     visual_check,
 )
 from app.core.config import get_settings
+from app.core.limiter import limiter
 from app.db.base import Base
 from app.db.session import engine
 
@@ -29,6 +33,9 @@ app = FastAPI(
     description="Bilingual (EN/DE), RAG-grounded triage API — see project roadmap for full spec.",
     version="0.1.0",
 )
+
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 app.add_middleware(
     CORSMiddleware,
@@ -58,6 +65,7 @@ app.include_router(admin_auth.router)
 app.include_router(admin_symptoms.router)
 app.include_router(admin_content.router)
 app.include_router(admin_sessions.router)
+app.include_router(admin_stats.router)
 app.include_router(admin_knowledge_base.router)
 
 FRONTEND_DIST = Path(__file__).resolve().parents[2] / "frontend_dist"
