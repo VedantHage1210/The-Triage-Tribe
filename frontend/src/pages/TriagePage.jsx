@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import DisclaimerBanner from "../components/DisclaimerBanner";
 import TriageResultCard from "../components/TriageResultCard";
 import ObservationCard from "../components/ObservationCard";
+import { MicIcon } from "../components/Icons";
 
 const IMAGE_CATEGORIES = ["eyes", "skin"]; // Section 10.1 scope
 const QUICK_PROMPTS = {
@@ -160,7 +161,7 @@ export default function TriagePage() {
 
       <main className="flex-1 flex flex-col items-center px-6 py-8">
         {!result && (
-          <div className="w-full max-w-md">
+          <div className="w-full max-w-md bg-white border border-slate-200 rounded-2xl p-6">
             {followUpQuestions.length > 0 && (
               <div className="bg-clinical-teal/10 border border-clinical-teal/30 rounded-xl p-4 mb-4">
                 <p className="text-sm text-slate-600 mb-2">{t("triage.answerFollowUp")}</p>
@@ -172,13 +173,13 @@ export default function TriagePage() {
               </div>
             )}
 
-            <div className="w-full max-w-md mb-4">
+            <div className="mb-4">
               <div className="flex items-end justify-between mb-2">
                 <div>
                   <p className="text-lg font-semibold text-ink">{t("triage.snapshotTitle")}</p>
                   <p className="text-xs text-slate-500 mt-1">{t("triage.snapshotSubtitle")}</p>
                 </div>
-                <span className="text-xs font-medium text-clinical-teal">{snapshotProgress}%</span>
+                <span className="font-mono text-xs text-clinical-teal tabular-nums">{snapshotProgress}%</span>
               </div>
               <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
                 <div className="h-full bg-clinical-teal rounded-full transition-all" style={{ width: `${snapshotProgress}%` }} />
@@ -204,8 +205,9 @@ export default function TriagePage() {
               />
               <div className="flex items-center justify-between">
                 <button type="button" onClick={toggleVoiceInput}
-                  className={`text-sm ${isListening ? "text-severity-emergency" : "text-clinical-teal"}`}>
-                  {isListening ? "● " : "🎙 "} {isListening ? t("triage.voiceListening") : t("triage.voiceInput")}
+                  className={`flex items-center gap-1.5 text-sm ${isListening ? "text-severity-emergency" : "text-clinical-teal"}`}>
+                  <MicIcon className="w-4 h-4" />
+                  {isListening ? t("triage.voiceListening") : t("triage.voiceInput")}
                 </button>
                 <span className="text-xs text-slate-400">{t("triage.privacyNote")}</span>
               </div>
