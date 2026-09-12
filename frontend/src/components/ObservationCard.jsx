@@ -11,13 +11,14 @@ export default function ObservationCard({ observation }) {
       </p>
 
       {observation.visible_features?.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+        <ul className="flex flex-col gap-1.5">
           {observation.visible_features.map((f, i) => (
-            <span key={i} className="text-xs bg-white border border-slate-200 text-slate-600 px-2 py-1 rounded-full">
+            <li key={i} className="text-sm text-slate-600 flex items-start gap-2">
+              <span className="text-clinical-teal mt-0.5">—</span>
               {f}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
 
       <p className="text-sm text-ink leading-relaxed">{observation.general_note}</p>
