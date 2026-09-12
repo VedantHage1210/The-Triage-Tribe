@@ -18,15 +18,16 @@ output a percentage, severity score, or definitive condition name as fact.
 Describe only visible features (color, swelling, texture, visible patterns).
 State clearly this is not a medical diagnosis. If the image is unclear, low
 quality, or you cannot make a confident observation, say so explicitly rather
-than guessing. Output in {language}.
+than guessing. Write every field entirely in {language_name} — do not mix in
+English words or sentences.
 
 Output strict JSON only:
-{
+{{
   "visible_features": ["string", ...],
   "general_note": "string",
   "recommend_professional_check": true,
   "image_quality_sufficient": true
-}"""
+}}"""
 
 
 def _call_vision_anthropic(system_prompt: str, image_b64: str, media_type: str, category: str) -> str:
@@ -57,17 +58,22 @@ def _call_vision_anthropic(system_prompt: str, image_b64: str, media_type: str, 
 
 
 def _call_vision_gemini(system_prompt: str, image_bytes: bytes, media_type: str, category: str) -> str:
-    import google.generativeai as genai
+    from google import genai
+    from google.genai import types
 
-    genai.configure(api_key=settings.LLM_API_KEY)
-    model = genai.GenerativeModel(model_name=settings.LLM_MODEL, system_instruction=system_prompt)
-    response = model.generate_content(
-        [
-            {"mime_type": media_type, "data": image_bytes},
+    client = genai.Client(api_key=settings.LLM_API_KEY)
+    response = client.models.generate_content(
+        model=settings.LLM_MODEL,
+        contents=[
+            types.Part.from_bytes(data=image_bytes, mime_type=media_type),
             f"This is a photo of the patient's {category}. Provide your observation.",
-        ]
+        ],
+        config=types.GenerateContentConfig(system_instruction=system_prompt),
     )
     return response.text
+
+
+LANGUAGE_NAMES = {"en": "English", "de": "German"}
 
 
 def analyze_image(image_bytes: bytes, media_type: str, category: str, language: str) -> VisualCheckResult:
@@ -76,7 +82,8 @@ def analyze_image(image_bytes: bytes, media_type: str, category: str, language: 
     Raises on failure — caller (API layer) must catch and fall back safely,
     same philosophy as Section 7.5.
     """
-    system_prompt = OBSERVATION_SYSTEM_PROMPT.replace("{language}", language)
+    language_name = LANGUAGE_NAMES.get(language, "English")
+    system_prompt = OBSERVATION_SYSTEM_PROMPT.format(language_name=language_name)
 
     if settings.LLM_PROVIDER == "gemini":
         raw_text = _call_vision_gemini(system_prompt, image_bytes, media_type, category)
