@@ -31,11 +31,11 @@ export default function AdminSessionsPage() {
           <tbody>
             {sessions.map((s) => (
               <tr key={s.id} className="border-t border-slate-100">
-                <td className="p-3 text-xs">{new Date(s.created_at).toLocaleString()}</td>
+                <td className="p-3 text-xs font-mono">{new Date(s.created_at).toLocaleString()}</td>
                 <td className="p-3">{s.category || "—"}</td>
                 <td className="p-3 uppercase text-xs">{s.language}</td>
                 <td className="p-3">{s.severity_result || "—"}</td>
-                <td className="p-3">
+                <td className="p-3 font-mono tabular-nums">
                   {s.confidence_score != null ? `${Math.round(s.confidence_score * 100)}%` : "—"}
                 </td>
                 <td className="p-3 text-xs">{s.triggered_by}</td>
