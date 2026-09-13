@@ -102,6 +102,20 @@ export default function TriageResultCard({ result }) {
           {result.reasoning}
         </p>
 
+        {result.key_factors?.length > 0 && (
+          <div>
+            <p className="text-[13px] text-ink/60 mb-2">{t("result.keyFactors", "What drove this priority")}</p>
+            <ul className="flex flex-col gap-1.5">
+              {result.key_factors.map((factor, i) => (
+                <li key={i} className={`text-sm text-ink flex items-start gap-2`}>
+                  <span className={s.text}>—</span>
+                  {factor}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {result.cited_conditions?.length > 0 && (
           <div className="text-sm text-ink/70">
             <span className="text-ink/50">{t("result.matchedAgainst")}: </span>

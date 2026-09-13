@@ -5,7 +5,19 @@ export async function fetchCategories() {
   return data;
 }
 
-export async function submitTriage({ text, language, category, sessionId, patientInfo }) {
+export async function submitTriage({ text, language, category, sessionId, patientInfo, vitals }) {
+  const toNumber = (v) => (v === "" || v === undefined || v === null ? undefined : Number(v));
+  const vitalsPayload = vitals
+    ? {
+        heart_rate_bpm: toNumber(vitals.heartRate),
+        bp_systolic: toNumber(vitals.bpSystolic),
+        bp_diastolic: toNumber(vitals.bpDiastolic),
+        temperature_c: toNumber(vitals.temperature),
+        spo2_percent: toNumber(vitals.spo2),
+      }
+    : undefined;
+  const hasAnyVital = vitalsPayload && Object.values(vitalsPayload).some((v) => v !== undefined);
+
   const { data } = await api.post("/triage", {
     text,
     language,
@@ -14,6 +26,7 @@ export async function submitTriage({ text, language, category, sessionId, patien
     patient_name: patientInfo?.name || null,
     patient_age: patientInfo?.age || null,
     patient_blood_group: patientInfo?.bloodGroup || null,
+    vitals: hasAnyVital ? vitalsPayload : null,
   });
   return data;
 }

@@ -84,3 +84,63 @@ def check_red_flags(text: str, language: str, db: Session) -> bool:
 
     fallback_terms = DEFAULT_RED_FLAG_TERMS.get(language, DEFAULT_RED_FLAG_TERMS["en"])
     return contains_red_flag_terms(text, fallback_terms)
+
+
+# Standard clinical red-flag vital sign thresholds (used in triage scores
+# such as NEWS2). These are conservative, widely-used cutoffs — not a
+# diagnosis, just "this number alone warrants immediate attention"
+# regardless of what the text says or whether the LLM is available.
+VITAL_REASON_TEMPLATES = {
+    "en": {
+        "spo2_low": "SpO2 {v}% — below safe oxygen saturation threshold",
+        "hr_high": "Heart rate {v} bpm — dangerously high",
+        "hr_low": "Heart rate {v} bpm — dangerously low",
+        "bp_low": "Blood pressure {v} systolic — signs of shock/hypotension",
+        "bp_high": "Blood pressure {v} systolic — hypertensive crisis range",
+        "temp_high": "Temperature {v}°C — dangerously high fever",
+        "temp_low": "Temperature {v}°C — dangerously low (hypothermia)",
+    },
+    "de": {
+        "spo2_low": "SpO2 {v}% — unter der sicheren Sauerstoffsättigungsgrenze",
+        "hr_high": "Herzfrequenz {v} bpm — gefährlich hoch",
+        "hr_low": "Herzfrequenz {v} bpm — gefährlich niedrig",
+        "bp_low": "Blutdruck {v} systolisch — Anzeichen für Schock/Hypotonie",
+        "bp_high": "Blutdruck {v} systolisch — hypertensive Krise",
+        "temp_high": "Temperatur {v}°C — gefährlich hohes Fieber",
+        "temp_low": "Temperatur {v}°C — gefährlich niedrig (Hypothermie)",
+    },
+}
+
+
+def check_vital_red_flags(vitals, language: str) -> tuple[bool, list[str]]:
+    """
+    Deterministic, LLM-independent check on numeric vital signs.
+    Returns (is_emergency, reasons) — reasons are ready to show a nurse
+    directly (no LLM interpretation step, so they can't be wrong or
+    inconsistent about basic threshold math).
+    """
+    if vitals is None:
+        return False, []
+
+    t = VITAL_REASON_TEMPLATES.get(language, VITAL_REASON_TEMPLATES["en"])
+    reasons = []
+
+    if vitals.spo2_percent is not None and vitals.spo2_percent < 90:
+        reasons.append(t["spo2_low"].format(v=vitals.spo2_percent))
+    if vitals.heart_rate_bpm is not None:
+        if vitals.heart_rate_bpm > 150:
+            reasons.append(t["hr_high"].format(v=vitals.heart_rate_bpm))
+        elif vitals.heart_rate_bpm < 40:
+            reasons.append(t["hr_low"].format(v=vitals.heart_rate_bpm))
+    if vitals.bp_systolic is not None:
+        if vitals.bp_systolic < 90:
+            reasons.append(t["bp_low"].format(v=vitals.bp_systolic))
+        elif vitals.bp_systolic > 180:
+            reasons.append(t["bp_high"].format(v=vitals.bp_systolic))
+    if vitals.temperature_c is not None:
+        if vitals.temperature_c >= 40.0:
+            reasons.append(t["temp_high"].format(v=vitals.temperature_c))
+        elif vitals.temperature_c <= 35.0:
+            reasons.append(t["temp_low"].format(v=vitals.temperature_c))
+
+    return len(reasons) > 0, reasons

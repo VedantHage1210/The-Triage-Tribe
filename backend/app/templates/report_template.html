@@ -110,6 +110,25 @@
 
   <p class="reasoning">{{ reasoning }}</p>
 
+  {% if vitals %}
+  <div class="section-title">{{ labels.vitals }}</div>
+  <table style="margin-bottom: 6px;">
+    <tr>
+      {% if vitals.heart_rate_bpm %}<td class="patient-label">HR: <b>{{ vitals.heart_rate_bpm }} bpm</b></td>{% endif %}
+      {% if vitals.bp_systolic %}<td class="patient-label">BP: <b>{{ vitals.bp_systolic }}{% if vitals.bp_diastolic %}/{{ vitals.bp_diastolic }}{% endif %}</b></td>{% endif %}
+      {% if vitals.temperature_c %}<td class="patient-label">Temp: <b>{{ vitals.temperature_c }}&deg;C</b></td>{% endif %}
+      {% if vitals.spo2_percent %}<td class="patient-label">SpO2: <b>{{ vitals.spo2_percent }}%</b></td>{% endif %}
+    </tr>
+  </table>
+  {% endif %}
+
+  {% if key_factors %}
+  <div class="section-title">{{ labels.key_factors }}</div>
+  <p class="matched-list">
+    {% for factor in key_factors %}— {{ factor }}<br/>{% endfor %}
+  </p>
+  {% endif %}
+
   {% if cited_conditions %}
   <div class="section-title">{{ labels.matched_against }}</div>
   <p class="matched-list">{{ cited_conditions | join(" · ") }}</p>

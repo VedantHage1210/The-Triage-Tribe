@@ -16,6 +16,15 @@ class Severity(str, Enum):
     SELF_CARE = "SELF_CARE"
 
 
+class VitalSigns(BaseModel):
+    """All optional — a patient/nurse may not have all of these on hand."""
+    heart_rate_bpm: Optional[int] = Field(default=None, ge=0, le=300)
+    bp_systolic: Optional[int] = Field(default=None, ge=0, le=300)
+    bp_diastolic: Optional[int] = Field(default=None, ge=0, le=200)
+    temperature_c: Optional[float] = Field(default=None, ge=25.0, le=45.0)
+    spo2_percent: Optional[int] = Field(default=None, ge=0, le=100)
+
+
 class TriageRequest(BaseModel):
     text: str = Field(..., min_length=1, max_length=2000)
     language: str = Field(default="en", pattern="^(en|de)$")
@@ -24,6 +33,7 @@ class TriageRequest(BaseModel):
     patient_name: Optional[str] = Field(default=None, max_length=120)
     patient_age: Optional[int] = Field(default=None, ge=0, le=130)
     patient_blood_group: Optional[str] = Field(default=None, max_length=8)
+    vitals: Optional[VitalSigns] = None
 
 
 class ExtractedSymptoms(BaseModel):
@@ -42,6 +52,12 @@ class TriageResult(BaseModel):
     recommended_action: str
     cited_conditions: list[str] = Field(default_factory=list)
     follow_up_questions: list[str] = Field(default_factory=list)
+    # Structured explainability — each entry names ONE input (a symptom or
+    # a vital sign) and the direction it pushed the priority, e.g.
+    # "SpO2 88% — below safe threshold" or "chest pain — high-risk symptom".
+    # A nurse should be able to scan this in a few seconds without reading
+    # the full reasoning paragraph.
+    key_factors: list[str] = Field(default_factory=list)
 
 
 class TriageResponse(BaseModel):
@@ -52,6 +68,7 @@ class TriageResponse(BaseModel):
     recommended_action: str
     cited_conditions: list[str]
     follow_up_questions: list[str]
+    key_factors: list[str] = Field(default_factory=list)
     needs_follow_up: bool
     triggered_by: str  # "guardrail" | "llm"
     language: str

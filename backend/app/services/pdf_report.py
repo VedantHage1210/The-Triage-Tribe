@@ -42,6 +42,8 @@ LABELS = {
         "confidence": "Confidence",
         "decision_source": "Decision Source",
         "matched_against": "Matched Against (Reference Conditions)",
+        "key_factors": "What Drove This Priority",
+        "vitals": "Reported Vital Signs",
         "recommended_action": "Recommended Action",
         "visual_observation": "AI Visual Observation",
         "not_a_diagnosis": "Not a diagnosis — general observation only.",
@@ -61,6 +63,8 @@ LABELS = {
         "confidence": "Konfidenz",
         "decision_source": "Entscheidungsquelle",
         "matched_against": "Abgeglichen mit (Referenzerkrankungen)",
+        "key_factors": "Ausschlaggebende Faktoren",
+        "vitals": "Gemeldete Vitalwerte",
         "recommended_action": "Empfohlene Maßnahme",
         "visual_observation": "KI-Sichtbeobachtung",
         "not_a_diagnosis": "Keine Diagnose — nur eine allgemeine Beobachtung.",
@@ -92,6 +96,10 @@ def generate_triage_report_pdf(session, lang: str = "en", visual_observation: di
     labels = LABELS[lang]
 
     template = env.get_template("report_template.html")
+    extracted = session.extracted_symptoms or {}
+    key_factors = extracted.get("key_factors") or []
+    vitals = extracted.get("vitals") or {}
+
     html_content = template.render(
         app_name="Clinical Triage Assistant",
         report_date=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
@@ -106,6 +114,8 @@ def generate_triage_report_pdf(session, lang: str = "en", visual_observation: di
             session.severity_result or "ROUTINE", session.severity_result
         ),
         reasoning=session.ai_reasoning,
+        key_factors=key_factors,
+        vitals=vitals,
         cited_conditions=session.cited_conditions or [],
         recommended_action=session.recommended_action,
         confidence_pct=round((session.confidence_score or 0.0) * 100),

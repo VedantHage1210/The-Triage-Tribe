@@ -28,6 +28,8 @@ export default function TriagePage() {
   const [text, setText] = useState("");
   const [patientInfo, setPatientInfo] = useState({ name: "", age: "", bloodGroup: "" });
   const [showPatientInfo, setShowPatientInfo] = useState(false);
+  const [vitals, setVitals] = useState({ heartRate: "", bpSystolic: "", bpDiastolic: "", temperature: "", spo2: "" });
+  const [showVitals, setShowVitals] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sessionId, setSessionId] = useState(null);
   const [followUpQuestions, setFollowUpQuestions] = useState([]);
@@ -123,6 +125,7 @@ export default function TriagePage() {
         category,
         sessionId,
         patientInfo,
+        vitals,
       });
 
       setSessionId(data.session_id);
@@ -246,6 +249,62 @@ export default function TriagePage() {
                     onChange={(e) => setPatientInfo({ ...patientInfo, bloodGroup: e.target.value })}
                     className="rounded-lg border border-slate-200 p-2 text-sm"
                   />
+                </div>
+              )}
+
+              {!showVitals && !sessionId && (
+                <button
+                  type="button"
+                  onClick={() => setShowVitals(true)}
+                  className="text-sm text-clinical-teal self-start"
+                >
+                  + {t("triage.vitalsTitle", "Add vital signs (optional)")}
+                </button>
+              )}
+
+              {showVitals && (
+                <div>
+                  <p className="text-xs text-slate-500 mb-2">
+                    {t("triage.vitalsHint", "If known — a nurse or a home device reading. Leave blank if unavailable.")}
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                    <input
+                      type="number"
+                      placeholder={t("triage.heartRate", "HR (bpm)")}
+                      value={vitals.heartRate}
+                      onChange={(e) => setVitals({ ...vitals, heartRate: e.target.value })}
+                      className="rounded-lg border border-slate-200 p-2 text-sm"
+                    />
+                    <input
+                      type="number"
+                      placeholder={t("triage.bpSystolic", "BP sys")}
+                      value={vitals.bpSystolic}
+                      onChange={(e) => setVitals({ ...vitals, bpSystolic: e.target.value })}
+                      className="rounded-lg border border-slate-200 p-2 text-sm"
+                    />
+                    <input
+                      type="number"
+                      placeholder={t("triage.bpDiastolic", "BP dia")}
+                      value={vitals.bpDiastolic}
+                      onChange={(e) => setVitals({ ...vitals, bpDiastolic: e.target.value })}
+                      className="rounded-lg border border-slate-200 p-2 text-sm"
+                    />
+                    <input
+                      type="number"
+                      step="0.1"
+                      placeholder={t("triage.temperature", "Temp °C")}
+                      value={vitals.temperature}
+                      onChange={(e) => setVitals({ ...vitals, temperature: e.target.value })}
+                      className="rounded-lg border border-slate-200 p-2 text-sm"
+                    />
+                    <input
+                      type="number"
+                      placeholder={t("triage.spo2", "SpO2 %")}
+                      value={vitals.spo2}
+                      onChange={(e) => setVitals({ ...vitals, spo2: e.target.value })}
+                      className="rounded-lg border border-slate-200 p-2 text-sm"
+                    />
+                  </div>
                 </div>
               )}
 
