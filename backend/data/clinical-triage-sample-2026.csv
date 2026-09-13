@@ -1,0 +1,401 @@
+record_id,arrival_hour,age,sex,chief_complaint,heart_rate,systolic_bp,diastolic_bp,respiratory_rate,spo2,temperature_c,pain_score,consciousness,esi_level,esi_label,triage_note,is_synthetic
+MTE-TRIAGE-0001,20,50,F,"Abdominal pain",107,136,87,17,95.1,37.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0002,8,63,M,"Migraine with vomiting",99,120,76,20,94.4,37.9,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0003,22,4,X,"Abdominal pain",93,110,80,15,98.2,38.6,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0004,5,35,X,"Fever and cough",85,132,69,20,96,38.1,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0005,16,60,F,"Sprained ankle",73,134,82,12,97,36.3,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0006,2,12,F,"Minor laceration",90,130,80,14,97.7,36.7,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0007,19,94,F,"Active GI bleed",132,105,88,28,93.9,37.9,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0008,19,91,X,"Moderate asthma exacerbation",79,124,77,15,98.8,38.7,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0009,14,84,F,"Fever and cough",92,109,83,17,96.5,37,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0010,11,51,M,"Active GI bleed",127,147,83,28,90.4,39.5,9,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0011,9,78,X,"Lower back pain",62,121,80,12,97.2,36.6,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0012,11,43,M,"Stroke symptoms / FAST positive",126,98,79,26,96.4,39.9,7,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0013,21,3,F,"Migraine with vomiting",95,136,76,15,94.9,37.8,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0014,4,93,X,"Severe trauma / major bleeding",79,72,50,19,85.2,39.6,2,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0015,10,34,M,"Cold symptoms >5 days mild",63,136,83,14,97.2,36.5,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0016,23,22,M,"Severe dyspnea",127,160,80,31,94.3,39.3,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0017,5,44,X,"Moderate asthma exacerbation",97,126,81,17,94.6,38.1,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0018,21,92,M,"Cardiac arrest",121,110,65,16,81.6,37.4,2,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0019,18,67,X,"Minor laceration",68,122,81,16,97.6,36.7,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0020,12,36,X,"Abdominal pain",96,118,86,19,98.2,36.4,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0021,20,9,M,"Abdominal pain",99,113,85,20,98.3,37.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0022,7,10,F,"Abdominal pain",87,130,88,19,97.5,37.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0023,19,94,M,"Sprained ankle",82,128,77,15,96.6,36.4,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0024,3,43,M,"Mild allergic rash",87,126,71,16,98.9,36.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0025,16,92,X,"Mild allergic rash",63,123,89,18,98.2,37.2,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0026,3,70,F,"Sore throat",88,122,79,15,97.5,37,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0027,20,24,M,"Severe dyspnea",116,116,86,23,96.2,37.9,9,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0028,21,10,F,"Sprained ankle",73,131,87,17,96.1,36.6,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0029,7,23,X,"High fever with altered mental status",104,130,94,28,92.4,37.8,6,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0030,18,89,X,"Sprained ankle",65,130,87,17,96.5,37.4,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0031,13,43,X,"Fever and cough",83,120,88,16,96.5,36.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0032,1,31,M,"Severe dyspnea",96,94,92,20,90.7,39.1,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0033,23,18,F,"Chest pain radiating to arm",134,143,77,31,88.1,39.3,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0034,22,62,M,"Abdominal pain",88,115,85,16,94.3,37.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0035,20,46,X,"Flank pain / suspected kidney stone",89,142,81,19,94.2,37.7,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0036,17,40,M,"Migraine with vomiting",78,120,69,17,97.8,37.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0037,14,66,M,"Migraine with vomiting",91,114,73,15,94.9,36.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0038,0,17,M,"Sore throat",64,111,88,15,96.4,36.8,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0039,23,32,F,"Unresponsive / GCS low",139,103,41,24,89.9,37.3,2,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0040,3,39,F,"Prescription refill request",82,119,80,13,98.1,36.9,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0041,8,18,X,"Flank pain / suspected kidney stone",72,124,69,17,96.8,37,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0042,22,66,F,"Fever and cough",90,144,72,19,98.8,37.6,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0043,1,63,X,"High fever with altered mental status",124,151,80,30,89.4,37.4,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0044,7,40,F,"High fever with altered mental status",96,123,87,20,89,38.3,10,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0045,18,31,X,"Moderate asthma exacerbation",89,126,69,20,94.8,36.4,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0046,5,39,M,"Cold symptoms >5 days mild",74,128,74,12,98,36.6,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0047,15,9,X,"Severe dyspnea",131,104,73,26,90.3,36.8,10,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0048,6,43,M,"Flank pain / suspected kidney stone",103,145,68,16,98.4,37.6,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0049,8,22,X,"Migraine with vomiting",103,118,69,20,97.5,36.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0050,6,15,F,"Moderate asthma exacerbation",83,109,80,16,97.8,36.5,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0051,16,40,F,"Lower back pain",78,133,72,14,96.2,37.3,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0052,4,59,X,"Abdominal pain",78,128,72,17,95.7,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0053,21,20,M,"Fever and cough",105,137,79,22,96.8,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0054,6,53,F,"Fever and cough",98,112,79,19,95.8,36.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0055,18,49,X,"Minor laceration",76,136,79,13,96.1,36.8,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0056,19,63,X,"Chronic mild joint pain",78,138,75,14,97.7,36.6,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0057,3,32,X,"Minor laceration",84,127,86,14,96.2,36.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0058,21,22,M,"Lower back pain",65,119,74,16,96.5,36.6,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0059,17,26,F,"Minor laceration",78,132,81,16,98.4,37.1,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0060,6,94,X,"Lower back pain",85,125,78,17,96.7,36.3,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0061,10,16,X,"Sore throat",77,111,82,18,98.6,36.7,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0062,12,84,F,"Anaphylaxis with airway compromise",139,93,45,20,88.6,39,2,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0063,5,34,F,"Cardiac arrest",137,86,61,12,83.1,36.2,1,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0064,17,84,X,"Sore throat",72,120,74,15,97.8,37.1,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0065,23,76,M,"Sprained ankle",72,128,71,16,96.5,36.7,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0066,0,12,M,"Migraine with vomiting",88,113,74,21,94.9,37.4,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0067,18,47,F,"Lower back pain",84,121,82,15,96.1,36.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0068,12,49,X,"Flank pain / suspected kidney stone",108,141,77,20,98.7,36.7,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0069,18,65,M,"Migraine with vomiting",106,110,73,19,97.8,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0070,16,73,F,"Stroke symptoms / FAST positive",118,115,62,23,94.2,36.1,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0071,18,21,F,"Abdominal pain",81,139,77,16,96,36.6,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0072,22,11,M,"Severe trauma / major bleeding",53,103,65,10,86.5,37.4,3,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0073,17,40,F,"Fever and cough",99,142,68,14,96.3,37.2,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0074,17,56,F,"Fever and cough",106,139,71,18,94.5,38.6,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0075,17,11,X,"Minor laceration",84,133,73,12,98.2,36.8,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0076,5,3,X,"Minor laceration",77,120,79,13,97.6,37.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0077,18,65,X,"Moderate asthma exacerbation",102,125,86,17,97.7,36.5,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0078,7,50,X,"Flank pain / suspected kidney stone",81,132,75,20,97.8,38.1,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0079,0,39,F,"Migraine with vomiting",82,121,73,16,97.2,38.1,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0080,16,23,M,"Prescription refill request",72,117,72,13,98.9,36.8,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0081,9,66,M,"Severe trauma / major bleeding",137,75,45,17,82.7,39.2,0,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0082,2,27,F,"Cold symptoms >5 days mild",80,122,75,16,97.1,37.2,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0083,11,13,M,"Chest pain radiating to arm",105,147,67,19,93.9,37.5,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0084,22,43,M,"Abdominal pain",99,123,80,17,95.2,36.3,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0085,8,5,M,"Fever and cough",90,128,88,18,94.1,37.3,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0086,22,22,X,"Sprained ankle",69,140,79,17,97.4,36.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0087,4,19,F,"Fever and cough",99,142,75,19,97,37.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0088,12,42,F,"Moderate asthma exacerbation",81,112,71,17,96,37.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0089,1,70,M,"Cold symptoms >5 days mild",84,140,79,14,97.3,37.1,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0090,9,12,M,"Fever and cough",98,134,78,15,94.6,38.2,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0091,0,71,F,"Sore throat",87,139,72,18,98.3,36.7,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0092,16,15,M,"High fever with altered mental status",124,158,92,31,90.2,38.2,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0093,14,73,M,"Chest pain radiating to arm",124,131,59,23,94.5,37.7,10,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0094,16,83,F,"Lower back pain",61,114,81,16,98.7,36.7,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0095,23,37,M,"Sprained ankle",70,135,86,16,97.9,37.4,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0096,7,81,F,"Minor laceration",66,131,77,13,97.3,36.7,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0097,13,45,M,"Chest pain radiating to arm",128,158,64,19,95.1,38.9,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0098,2,75,F,"Anaphylaxis with airway compromise",50,109,51,26,81.2,38.9,2,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0099,3,42,F,"Unresponsive / GCS low",75,96,44,16,81.7,37.2,1,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0100,0,73,M,"High fever with altered mental status",128,103,61,26,89.5,37.2,10,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0101,1,5,M,"Severe trauma / major bleeding",46,95,61,12,86.4,36.4,0,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0102,2,44,M,"Flank pain / suspected kidney stone",88,140,89,16,95.7,36.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0103,7,76,F,"Migraine with vomiting",73,125,84,16,94.9,38.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0104,12,24,M,"High fever with altered mental status",123,136,92,26,93.2,38.2,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0105,22,31,X,"Minor laceration",87,124,71,15,98.1,37.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0106,23,30,X,"Chest pain radiating to arm",115,132,89,27,95.5,37.2,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0107,4,18,M,"Sore throat",74,119,87,18,97.6,37,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0108,23,86,M,"Cold symptoms >5 days mild",71,132,73,14,99,37,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0109,21,86,X,"Migraine with vomiting",105,144,81,14,95.4,36.8,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0110,14,83,X,"Chronic mild joint pain",66,122,79,12,98.3,36.9,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0111,21,46,X,"Severe trauma / major bleeding",53,104,55,35,88.5,39.6,2,"Confused",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0112,7,36,F,"Abdominal pain",107,108,90,19,97.1,38.7,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0113,9,64,F,"High fever with altered mental status",97,152,82,28,92.5,37.9,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0114,4,5,M,"Abdominal pain",102,106,83,19,95.5,36.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0115,1,5,F,"Flank pain / suspected kidney stone",77,134,85,18,94.8,37.5,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0116,20,86,M,"Active GI bleed",99,133,86,21,95.8,39.7,8,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0117,5,19,M,"Fever and cough",88,118,75,14,94.2,37.8,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0118,0,18,X,"High fever with altered mental status",127,120,65,28,92.9,36.2,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0119,1,81,X,"Fever and cough",70,141,86,18,95.8,38,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0120,14,87,M,"Flank pain / suspected kidney stone",102,109,88,22,94.8,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0121,10,83,X,"Stroke symptoms / FAST positive",99,112,90,20,92.3,37.7,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0122,0,24,F,"Severe dyspnea",113,149,90,22,97.3,39.6,7,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0123,23,91,M,"Severe dyspnea",131,109,82,28,95.8,36.6,7,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0124,18,27,M,"Migraine with vomiting",73,120,66,16,96,38.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0125,14,29,F,"High fever with altered mental status",125,132,57,32,95.9,39.7,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0126,19,48,X,"Sprained ankle",76,134,74,16,98.6,36.4,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0127,16,34,X,"Sore throat",69,134,86,14,97.2,37.1,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0128,8,86,X,"Abdominal pain",103,129,71,17,98.8,38.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0129,11,87,F,"Mild allergic rash",76,137,84,15,98.4,37,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0130,4,12,M,"Sprained ankle",64,130,86,14,98.8,36.7,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0131,16,39,F,"Abdominal pain",101,109,70,14,94.6,37.3,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0132,2,92,F,"Mild allergic rash",87,136,73,13,97.5,37.2,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0133,15,89,M,"Migraine with vomiting",80,125,84,20,97.7,36.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0134,10,21,F,"Stroke symptoms / FAST positive",133,109,91,23,96.1,38.9,10,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0135,20,52,X,"Chest pain radiating to arm",136,128,81,23,91.3,39.9,7,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0136,4,58,X,"Flank pain / suspected kidney stone",101,141,80,14,97.8,36.2,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0137,10,13,M,"Sprained ankle",66,116,86,16,97.7,36.4,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0138,18,37,M,"Mild allergic rash",75,138,72,12,96.4,36.9,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0139,20,47,F,"Abdominal pain",107,144,71,21,95.5,36.8,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0140,0,77,F,"Mild allergic rash",77,135,73,17,98.4,36.5,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0141,14,91,F,"Flank pain / suspected kidney stone",106,111,74,16,96.8,38.5,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0142,17,68,F,"Sore throat",61,127,71,16,96.9,37.5,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0143,14,30,M,"Migraine with vomiting",107,119,82,20,97.3,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0144,18,19,M,"Migraine with vomiting",103,110,74,15,95.1,36.6,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0145,9,37,M,"Severe trauma / major bleeding",48,84,49,25,89.8,36.5,3,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0146,11,17,X,"Abdominal pain",83,119,70,20,95.5,36.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0147,2,82,X,"Mild allergic rash",61,134,88,17,98.8,36.5,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0148,5,51,X,"Chronic mild joint pain",72,128,79,15,98.9,36.5,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0149,1,79,F,"Flank pain / suspected kidney stone",94,110,83,19,95.9,37.3,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0150,2,57,X,"Mild allergic rash",61,119,82,15,98,36.6,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0151,17,29,F,"Moderate asthma exacerbation",108,138,72,22,97.3,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0152,18,42,X,"Moderate asthma exacerbation",72,125,86,22,98.9,37.7,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0153,4,7,M,"Active GI bleed",99,152,78,23,96.7,36.6,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0154,3,25,F,"Migraine with vomiting",91,120,75,19,94.6,36.9,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0155,16,86,M,"Sore throat",65,124,72,14,97.2,37.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0156,20,88,X,"Migraine with vomiting",88,130,79,19,97.6,37.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0157,12,33,F,"Moderate asthma exacerbation",102,145,86,16,96.6,38.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0158,18,92,M,"Fever and cough",73,141,71,22,94.7,38.5,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0159,17,14,F,"Active GI bleed",121,154,71,25,92.7,37.7,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0160,3,10,F,"Cardiac arrest",141,91,40,35,88.3,37.9,2,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0161,18,92,X,"Abdominal pain",88,106,83,22,97,37.2,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0162,8,5,M,"Lower back pain",89,122,84,12,96.8,37.5,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0163,23,59,X,"Flank pain / suspected kidney stone",104,114,71,16,95.3,36.9,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0164,17,16,M,"Sore throat",73,139,76,15,97,36.6,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0165,6,91,X,"Fever and cough",84,119,81,17,97.4,38.2,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0166,15,95,F,"Migraine with vomiting",92,106,77,21,95.2,36.9,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0167,7,51,F,"Flank pain / suspected kidney stone",88,123,85,21,98.7,38.4,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0168,6,55,M,"Chest pain radiating to arm",133,96,65,29,98,37.2,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0169,12,29,M,"Migraine with vomiting",74,126,86,17,94.4,37.1,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0170,2,47,M,"Severe dyspnea",103,108,64,30,91,37.9,8,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0171,9,50,M,"Flank pain / suspected kidney stone",101,121,90,20,97.3,36.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0172,3,87,F,"Migraine with vomiting",80,107,81,19,94.7,37.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0173,20,29,M,"Chest pain radiating to arm",137,156,89,24,95,36.2,6,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0174,17,25,X,"Moderate asthma exacerbation",76,118,66,20,98.4,36.9,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0175,6,91,F,"Minor laceration",78,132,76,15,97.7,36.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0176,10,34,M,"Stroke symptoms / FAST positive",132,153,76,27,95.9,36.9,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0177,18,25,X,"Flank pain / suspected kidney stone",94,126,71,18,95.9,37.8,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0178,7,50,M,"Active GI bleed",120,134,83,25,92.2,39.1,7,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0179,19,39,F,"Severe trauma / major bleeding",142,77,58,9,89.6,38.1,3,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0180,15,36,F,"Flank pain / suspected kidney stone",91,144,89,14,97.9,36.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0181,3,16,F,"Flank pain / suspected kidney stone",73,124,78,21,95.2,38.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0182,20,36,F,"Migraine with vomiting",96,135,71,21,97.3,36.8,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0183,9,63,X,"Lower back pain",73,129,70,12,98.6,37.2,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0184,11,28,X,"Abdominal pain",105,111,81,21,96.3,38,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0185,17,74,F,"Flank pain / suspected kidney stone",94,140,74,15,95.3,38.3,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0186,1,48,M,"Mild allergic rash",66,139,82,14,97.9,36.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0187,10,23,F,"Moderate asthma exacerbation",102,138,84,16,96.4,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0188,19,38,X,"Moderate asthma exacerbation",106,127,74,15,96.6,37.3,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0189,17,47,X,"Severe dyspnea",102,112,88,19,89.4,38.1,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0190,11,47,F,"Flank pain / suspected kidney stone",107,129,89,15,98.2,38.1,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0191,0,39,M,"Fever and cough",88,124,75,19,96.3,37,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0192,6,50,X,"Abdominal pain",78,131,74,17,96.5,36.8,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0193,23,8,F,"Prescription refill request",71,119,79,15,98.9,36.6,3,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0194,15,45,X,"Fever and cough",82,108,67,22,98.8,36.4,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0195,15,27,X,"Stroke symptoms / FAST positive",100,139,83,29,93.8,38.7,10,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0196,0,88,X,"Moderate asthma exacerbation",77,119,85,20,95.5,36.5,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0197,11,18,F,"Lower back pain",78,114,76,17,98.5,36.9,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0198,20,89,X,"Administrative / work note",72,131,74,15,97,36.9,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0199,14,76,M,"Fever and cough",71,136,81,16,96.2,38.2,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0200,5,4,M,"Mild allergic rash",89,115,89,14,97.7,36.6,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0201,21,30,X,"Minor laceration",82,116,76,17,96.2,37,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0202,10,90,F,"Abdominal pain",73,106,77,17,98.8,38.4,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0203,12,56,X,"Active GI bleed",111,101,59,18,91.9,38.9,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0204,0,13,M,"Abdominal pain",107,137,80,19,96.4,36.4,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0205,10,3,X,"Active GI bleed",123,135,74,25,91.3,37.4,6,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0206,3,68,M,"Flank pain / suspected kidney stone",106,135,82,15,96.9,36.8,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0207,8,11,X,"Lower back pain",87,121,73,14,98.5,36.9,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0208,1,91,M,"Abdominal pain",108,122,65,22,94.1,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0209,2,43,M,"Fever and cough",71,108,82,22,94.1,38.5,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0210,21,91,F,"Migraine with vomiting",82,128,73,18,95.9,37.5,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0211,22,68,M,"Active GI bleed",134,116,82,27,92.6,37.9,6,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0212,2,82,M,"Administrative / work note",79,135,80,13,98.4,37.1,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0213,21,85,M,"Migraine with vomiting",74,127,74,20,94.9,36.9,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0214,6,70,F,"Severe trauma / major bleeding",127,80,53,25,87.6,39.9,3,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0215,18,88,M,"Active GI bleed",115,94,82,27,96.1,37.4,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0216,14,30,M,"Migraine with vomiting",71,113,78,20,96.8,38.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0217,4,22,M,"Lower back pain",82,131,83,12,96.3,37.1,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0218,16,27,F,"Migraine with vomiting",82,134,76,16,95,38,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0219,6,39,F,"Migraine with vomiting",109,144,82,19,97.3,37.1,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0220,8,37,F,"Lower back pain",73,132,82,16,97.9,36.7,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0221,23,74,M,"Moderate asthma exacerbation",90,115,70,20,98.6,37.9,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0222,16,38,X,"Flank pain / suspected kidney stone",95,113,78,19,97.8,36.9,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0223,9,22,F,"Severe dyspnea",111,146,63,30,93.7,36.8,9,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0224,17,55,F,"Sprained ankle",89,118,88,14,98.8,36.9,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0225,6,91,M,"Flank pain / suspected kidney stone",95,132,87,19,95.7,38.2,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0226,0,90,F,"Flank pain / suspected kidney stone",100,134,73,22,98.4,37.3,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0227,3,48,F,"Migraine with vomiting",93,130,72,22,97.3,37.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0228,16,7,M,"Abdominal pain",80,133,72,19,97.5,38.4,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0229,7,82,X,"Flank pain / suspected kidney stone",89,109,68,18,98.4,38.3,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0230,8,42,M,"Migraine with vomiting",104,123,78,14,96.3,37.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0231,23,22,M,"Administrative / work note",61,138,78,14,98,37,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0232,15,44,X,"Flank pain / suspected kidney stone",92,142,73,21,96.2,37.7,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0233,3,50,M,"Minor laceration",82,125,84,16,98.8,37,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0234,22,80,X,"Migraine with vomiting",71,120,80,19,98.9,38.6,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0235,12,33,X,"Abdominal pain",96,142,77,15,95.2,38.2,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0236,23,53,F,"Severe dyspnea",137,147,77,20,94.6,37.4,10,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0237,5,74,F,"Stroke symptoms / FAST positive",106,146,58,24,88.4,36.6,7,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0238,6,88,X,"Flank pain / suspected kidney stone",91,114,85,17,96.6,37.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0239,16,68,M,"Sprained ankle",86,120,81,15,98,36.3,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0240,20,85,M,"Fever and cough",80,115,68,16,97.7,37.8,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0241,14,23,F,"Fever and cough",102,129,80,19,94.4,36.7,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0242,11,86,F,"Abdominal pain",71,143,75,20,98.8,38.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0243,10,77,M,"Migraine with vomiting",71,133,78,16,94.9,36.4,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0244,17,33,F,"Stroke symptoms / FAST positive",137,111,87,20,94.1,36.3,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0245,2,62,X,"Lower back pain",67,111,85,16,98.3,37.2,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0246,0,33,F,"Moderate asthma exacerbation",101,129,86,18,94.2,38,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0247,14,16,F,"Moderate asthma exacerbation",94,139,89,18,94.7,37.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0248,2,33,F,"Fever and cough",78,139,79,15,98.4,37.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0249,9,32,X,"Chest pain radiating to arm",107,135,68,27,92.7,39.1,6,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0250,16,39,X,"Stroke symptoms / FAST positive",121,140,63,31,95.2,37.3,9,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0251,2,44,F,"Migraine with vomiting",82,113,69,17,96.1,37.4,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0252,7,84,X,"Minor laceration",86,123,82,15,99,37.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0253,21,94,F,"Mild allergic rash",68,129,73,16,97.1,36.7,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0254,12,24,X,"Abdominal pain",70,134,88,17,97.1,37.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0255,17,65,M,"Active GI bleed",97,112,57,18,97.5,39.5,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0256,16,75,F,"Flank pain / suspected kidney stone",106,123,85,19,94.3,36.7,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0257,9,59,F,"Sprained ankle",73,130,77,13,97.9,37,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0258,20,46,M,"Lower back pain",79,134,84,15,96.6,37.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0259,0,56,M,"Moderate asthma exacerbation",92,136,89,21,98.5,36.3,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0260,23,92,F,"Sore throat",70,120,77,17,96.5,37,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0261,2,49,X,"Migraine with vomiting",73,133,77,14,94.2,38.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0262,8,28,M,"Sprained ankle",80,129,88,15,98.1,36.6,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0263,15,73,F,"Chest pain radiating to arm",116,126,79,19,88.1,36.8,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0264,1,8,M,"Lower back pain",80,113,85,14,98,37.2,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0265,14,44,M,"Fever and cough",93,126,87,19,96.2,38.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0266,0,47,F,"Fever and cough",92,113,71,15,98.4,36.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0267,23,89,X,"Chronic mild joint pain",85,119,76,14,97.4,37,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0268,1,68,F,"Mild allergic rash",72,138,81,15,97.5,37.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0269,22,37,M,"Lower back pain",88,114,85,15,98.6,36.5,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0270,6,83,M,"Fever and cough",85,116,67,15,98.9,38.5,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0271,21,30,M,"Stroke symptoms / FAST positive",112,104,77,24,90.6,36.8,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0272,14,17,M,"Fever and cough",110,134,86,15,96,38,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0273,15,33,F,"Fever and cough",92,131,84,18,94.9,36.3,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0274,20,96,X,"Flank pain / suspected kidney stone",102,137,90,17,97.6,37.2,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0275,5,44,X,"Chest pain radiating to arm",121,134,86,19,97.9,37,9,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0276,0,79,M,"Sprained ankle",88,134,88,15,98.3,36.4,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0277,23,16,F,"Lower back pain",68,116,80,13,96.8,36.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0278,15,91,X,"Sprained ankle",89,134,70,16,98.4,37.2,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0279,13,13,X,"Moderate asthma exacerbation",87,135,72,21,95.4,38.2,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0280,13,66,X,"Flank pain / suspected kidney stone",81,142,71,16,95.6,37.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0281,6,67,X,"Fever and cough",99,128,78,20,94.5,36.8,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0282,6,48,X,"Sore throat",76,135,74,17,98,37.2,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0283,5,95,X,"Severe dyspnea",110,99,66,25,95.1,37.2,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0284,14,15,M,"Migraine with vomiting",86,128,72,20,96.3,38.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0285,21,96,F,"Fever and cough",97,132,83,20,95.1,36.7,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0286,13,84,M,"Sore throat",71,132,75,12,97.1,36.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0287,20,30,F,"Chronic mild joint pain",62,138,70,15,97.5,36.8,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0288,18,3,X,"Moderate asthma exacerbation",82,141,75,15,96.7,37.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0289,10,7,M,"Active GI bleed",111,101,92,28,95.4,37.3,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0290,18,15,X,"Severe dyspnea",134,97,70,29,91,36.2,7,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0291,14,43,F,"Anaphylaxis with airway compromise",153,99,40,19,87.8,37.3,4,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0292,22,9,M,"Moderate asthma exacerbation",86,125,79,21,95.4,37.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0293,10,92,X,"Chest pain radiating to arm",115,159,78,24,90.7,37.9,10,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0294,11,36,F,"Moderate asthma exacerbation",71,130,72,19,97.6,36.9,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0295,22,41,X,"Mild allergic rash",70,112,82,17,96.7,37.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0296,6,80,M,"Flank pain / suspected kidney stone",80,118,76,21,95.9,37.7,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0297,23,53,M,"Moderate asthma exacerbation",83,141,77,18,94.9,38.3,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0298,1,37,M,"Mild allergic rash",78,123,87,14,97.7,37,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0299,11,66,X,"Mild allergic rash",72,120,82,13,98.1,37.1,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0300,3,23,M,"High fever with altered mental status",130,142,78,23,92.3,39.8,8,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0301,15,25,M,"Lower back pain",89,111,80,15,96.5,37.2,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0302,19,44,F,"Lower back pain",73,135,78,15,97.8,36.7,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0303,8,39,M,"Prescription refill request",65,117,77,12,97.6,36.5,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0304,17,80,F,"Mild allergic rash",62,120,83,15,96.7,36.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0305,19,88,F,"Abdominal pain",108,116,77,14,95.9,36.8,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0306,1,22,F,"Sore throat",61,128,70,18,96.4,36.4,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0307,4,51,X,"Fever and cough",85,130,68,19,96.5,38.1,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0308,21,74,M,"Abdominal pain",91,112,71,19,97.4,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0309,5,34,F,"Anaphylaxis with airway compromise",152,84,42,12,83,36.1,3,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0310,18,48,M,"Active GI bleed",111,152,62,23,92.2,36.6,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0311,16,20,F,"Moderate asthma exacerbation",106,129,66,21,96.1,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0312,17,78,M,"Migraine with vomiting",97,112,69,18,97.9,37.4,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0313,13,9,F,"Flank pain / suspected kidney stone",109,137,83,19,98.1,38,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0314,18,16,X,"Moderate asthma exacerbation",107,139,74,17,94.6,38.4,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0315,7,31,F,"Unresponsive / GCS low",122,100,63,12,84.7,36.8,1,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0316,21,3,M,"Sore throat",84,133,87,15,96.7,37,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0317,23,60,X,"Moderate asthma exacerbation",83,131,85,19,95.4,38.3,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0318,3,14,X,"Flank pain / suspected kidney stone",74,130,72,19,94.9,36.9,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0319,18,74,M,"Sore throat",84,132,83,16,96.5,36.7,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0320,18,12,M,"Moderate asthma exacerbation",76,116,75,19,95.4,37.1,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0321,0,3,X,"Minor laceration",72,125,80,15,99,36.3,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0322,23,87,M,"Moderate asthma exacerbation",71,129,70,20,96.1,38.4,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0323,0,14,X,"Lower back pain",63,115,83,18,97.5,37.1,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0324,3,76,M,"Lower back pain",90,127,83,14,96.5,36.3,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0325,23,22,X,"Sprained ankle",75,116,83,15,97.8,37.5,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0326,4,52,M,"Abdominal pain",99,132,81,20,96.2,36.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0327,7,80,X,"Chest pain radiating to arm",126,137,85,21,96.5,39.2,10,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0328,19,3,M,"Anaphylaxis with airway compromise",126,96,54,27,88.1,39,0,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0329,13,73,M,"Minor laceration",64,124,90,16,96.2,36.7,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0330,5,77,X,"Sore throat",71,134,76,13,96.7,36.7,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0331,20,23,X,"Sore throat",61,124,82,16,96.6,37.5,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0332,2,78,F,"Prescription refill request",76,123,74,13,97.1,36.8,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0333,4,84,X,"Mild allergic rash",81,134,86,13,96,37.2,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0334,4,70,M,"Mild allergic rash",74,119,80,18,99,36.8,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0335,4,6,M,"Sprained ankle",84,135,75,12,97.8,37.3,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0336,16,23,F,"Migraine with vomiting",90,118,90,19,95.8,38.1,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0337,16,44,F,"Minor laceration",62,125,79,15,98.9,36.6,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0338,6,13,X,"Sore throat",62,129,72,16,97.6,36.7,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0339,14,96,X,"Abdominal pain",73,135,89,19,97.8,37.5,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0340,6,33,M,"High fever with altered mental status",131,115,72,31,97.3,37,8,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0341,8,64,X,"Sore throat",84,130,75,12,98,36.5,2,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0342,18,1,X,"Migraine with vomiting",86,129,70,15,95.4,37.3,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0343,9,91,M,"Sore throat",66,123,89,15,96.2,37,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0344,16,95,F,"Minor laceration",65,123,73,14,98.1,37.5,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0345,15,32,F,"Cold symptoms >5 days mild",64,130,71,14,97.1,36.6,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0346,6,61,X,"Flank pain / suspected kidney stone",81,114,77,15,98.4,38.4,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0347,16,22,M,"Lower back pain",80,116,81,18,96.4,36.7,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0348,11,33,M,"Moderate asthma exacerbation",89,142,87,14,95.2,38,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0349,7,32,F,"Moderate asthma exacerbation",106,139,82,18,98.4,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0350,0,88,M,"Flank pain / suspected kidney stone",98,142,78,20,94,36.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0351,8,53,F,"Flank pain / suspected kidney stone",93,130,70,17,95.4,37.2,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0352,22,6,X,"Moderate asthma exacerbation",75,143,65,18,96.4,37.4,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0353,16,42,M,"Stroke symptoms / FAST positive",116,112,84,18,90.1,38.6,8,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0354,2,41,F,"Minor laceration",67,132,84,14,97.4,36.9,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0355,3,72,M,"Abdominal pain",108,118,69,19,98.6,38,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0356,20,42,F,"Fever and cough",98,126,68,21,96.3,36.7,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0357,11,7,M,"Stroke symptoms / FAST positive",112,133,64,31,92.6,36.3,7,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0358,8,67,X,"Moderate asthma exacerbation",104,139,73,15,96.9,38.1,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0359,6,14,M,"Flank pain / suspected kidney stone",100,125,85,15,94.5,36.3,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0360,23,56,F,"Prescription refill request",67,128,72,14,98.8,36.7,1,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0361,4,7,M,"Fever and cough",88,116,87,21,94,38.3,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0362,20,84,X,"High fever with altered mental status",131,101,62,29,90.9,38.1,9,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0363,22,80,F,"Sprained ankle",65,112,79,16,96.4,37.4,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0364,9,14,F,"Flank pain / suspected kidney stone",104,139,77,15,94.7,38.6,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0365,3,88,M,"Abdominal pain",81,139,79,17,94.3,37.3,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0366,9,28,F,"Sprained ankle",72,111,71,13,98.7,37.1,6,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0367,12,65,F,"Abdominal pain",87,113,85,15,94.9,38.4,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0368,22,82,M,"Fever and cough",84,129,82,18,96.4,37.9,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0369,17,42,X,"Migraine with vomiting",90,111,82,19,97.9,37.6,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0370,6,41,M,"Abdominal pain",83,136,86,18,95.5,36.3,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0371,18,75,X,"Cardiac arrest",52,106,60,25,88.4,37.2,3,"Responds to pain",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0372,6,95,M,"Sprained ankle",69,134,79,17,98.6,36.8,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0373,7,8,M,"Mild allergic rash",85,134,73,14,96.1,36.8,3,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0374,7,29,X,"Prescription refill request",70,135,75,14,98,36.5,3,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0375,23,6,M,"Severe trauma / major bleeding",55,89,41,17,78.6,38.7,3,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0376,20,12,X,"Active GI bleed",112,98,70,26,95.8,36.2,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0377,14,21,X,"Unresponsive / GCS low",77,103,57,35,78.8,38.3,4,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0378,14,56,F,"Migraine with vomiting",80,125,90,16,98.6,36.5,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0379,1,81,X,"Lower back pain",63,130,80,17,96.6,37.4,5,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0380,19,33,M,"Anaphylaxis with airway compromise",46,99,45,14,78.5,35.1,2,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0381,18,50,M,"Anaphylaxis with airway compromise",48,98,42,36,80.8,38.9,1,"Unresponsive",1,"ESI-1 Immediate","Synthetic note: critical presentation; immediate resuscitation pathway suggested.",true
+MTE-TRIAGE-0382,21,44,M,"Abdominal pain",96,125,87,16,96.1,36.8,7,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0383,12,10,M,"Migraine with vomiting",75,109,90,16,95.3,37.4,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0384,0,82,F,"Flank pain / suspected kidney stone",87,133,76,19,95.2,37.8,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0385,11,67,M,"Flank pain / suspected kidney stone",109,114,81,21,96.6,37.5,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0386,6,7,X,"Abdominal pain",99,134,88,16,98,37.9,4,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0387,9,7,X,"Chest pain radiating to arm",110,131,71,23,95.9,39.3,7,"Alert",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0388,1,35,M,"Mild allergic rash",60,131,77,15,96.1,36.6,4,"Alert",4,"ESI-4 Less Urgent","Synthetic note: lower acuity; can wait with reassessment triggers.",true
+MTE-TRIAGE-0389,23,78,X,"Moderate asthma exacerbation",71,134,68,16,97.7,37.8,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0390,6,16,M,"Prescription refill request",63,129,74,16,97,36.4,0,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0391,12,68,M,"Chest pain radiating to arm",101,91,63,23,88.5,38.8,7,"Drowsy",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0392,12,26,F,"Active GI bleed",113,159,95,19,96.2,38.7,9,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0393,15,16,F,"Migraine with vomiting",94,129,68,14,95.7,38,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0394,23,41,X,"Migraine with vomiting",101,141,66,15,95.1,36.5,6,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0395,1,35,X,"Administrative / work note",79,137,82,14,99,37,2,"Alert",5,"ESI-5 Non-Urgent","Synthetic note: non-urgent; suitable for delayed / primary-care pathway.",true
+MTE-TRIAGE-0396,17,84,F,"Moderate asthma exacerbation",90,137,85,14,98.6,38,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0397,2,23,M,"Moderate asthma exacerbation",98,111,78,14,94.5,37.6,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0398,5,67,F,"Chest pain radiating to arm",130,134,74,26,90.1,39.5,8,"Confused",2,"ESI-2 Emergent","Synthetic note: high-risk features present; urgent clinician review recommended.",true
+MTE-TRIAGE-0399,0,33,X,"Abdominal pain",82,127,89,15,96.6,38.1,8,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true
+MTE-TRIAGE-0400,1,26,M,"Abdominal pain",79,116,84,16,96.5,37.6,5,"Alert",3,"ESI-3 Urgent","Synthetic note: urgent but stable vitals; needs timely assessment and diagnostics.",true

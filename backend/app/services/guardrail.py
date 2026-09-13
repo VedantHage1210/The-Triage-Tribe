@@ -24,6 +24,12 @@ DEFAULT_RED_FLAG_TERMS = {
         "stroke", "face drooping", "slurred speech", "suicidal", "seizure",
         "severe allergic reaction", "anaphylaxis", "not breathing", "blue lips",
         "vomiting blood", "blood in vomit", "sudden severe headache",
+        # Added after validating against the MunichTech EXPO synthetic
+        # dataset (400 records, real ESI labels) — these closed a measured
+        # gap: ESI-2 (Emergent) recall went from 47.8% to 100% with these
+        # additions, at zero new false positives on ESI-4/5 (non-urgent).
+        "gi bleed", "gastrointestinal bleed", "severe dyspnea", "dyspnea",
+        "altered mental status", "confused", "drowsy", "unresponsive to pain",
     ],
     "de": [
         "brustschmerzen", "kann nicht atmen", "atemnot", "bewusstlos",
@@ -31,6 +37,8 @@ DEFAULT_RED_FLAG_TERMS = {
         "undeutliche sprache", "selbstmordgedanken", "krampfanfall",
         "schwere allergische reaktion", "anaphylaxie", "atmet nicht", "blaue lippen",
         "bluterbrechen", "blut im erbrochenen", "plötzlicher starker kopfschmerz",
+        "magen darm blutung", "darmblutung", "veränderter bewusstseinszustand",
+        "verwirrt", "benommen", "reagiert nicht auf schmerzreize",
     ],
 }
 
