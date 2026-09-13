@@ -11,9 +11,19 @@ export default function Footer() {
   return (
     <footer className="mt-auto border-t border-slate-100 px-6 py-6 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
       <p>{t("footer.tagline", "Decision-support tool — not a substitute for professional medical advice.")}</p>
-      <Link to="/how-it-works" className="text-clinical-teal hover:underline">
-        {t("nav.howItWorks", "How it works")}
-      </Link>
+      <div className="flex items-center gap-4">
+        <a
+          href="https://github.com/VedantHage1210/The-Triage-Tribe"
+          target="_blank"
+          rel="noreferrer"
+          className="text-clinical-teal hover:underline"
+        >
+          {t("footer.viewSource", "View source on GitHub")}
+        </a>
+        <Link to="/how-it-works" className="text-clinical-teal hover:underline">
+          {t("nav.howItWorks", "How it works")}
+        </Link>
+      </div>
     </footer>
   );
 }
