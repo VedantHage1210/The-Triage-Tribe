@@ -19,4 +19,12 @@ COPY --from=frontend-build /workspace/frontend/dist ./frontend_dist/
 WORKDIR /app/backend
 
 EXPOSE 7860
-CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860} & app_pid=$!; (python -m scripts.seed_data && python -m scripts.embed_knowledge_base) || echo 'Background data initialization failed; API remains available'; wait $app_pid"]
+# Data init runs to completion FIRST, then uvicorn starts — sequential,
+# not concurrent. Running these at the same time (the old setup) doubles
+# peak memory during boot: FastAPI's own startup overlapping with
+# sentence-transformers loading its embedding model into RAM. On a
+# memory-constrained host that combination was enough to trigger an OOM
+# kill before uvicorn ever printed its startup banner, causing an
+# endless restart→re-embed→OOM loop. Running them one at a time keeps
+# peak memory lower at the cost of a slightly longer boot.
+CMD ["sh", "-c", "(python -m scripts.seed_data && python -m scripts.embed_knowledge_base) || echo 'Data initialization failed; starting API anyway'; exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-7860}"]

@@ -17,8 +17,20 @@ rows = db.query(KnowledgeBase).all()
 if not rows:
     print("No knowledge_base rows found — run `python -m scripts.seed_data` first.")
 else:
-    model = get_embedding_model()
     collection = get_chroma_collection()
+
+    # Skip re-embedding (and skip loading the embedding model at all —
+    # that's the expensive part) if the store already has the right
+    # number of rows. This matters most on every container restart: the
+    # sentence-transformers model load is the single heaviest thing this
+    # script does, and there's no reason to pay that cost again if the
+    # data hasn't changed since last time.
+    if collection.count() == len(rows):
+        print(f"Vector store already has {len(rows)} rows — skipping re-embed.")
+        db.close()
+        raise SystemExit(0)
+
+    model = get_embedding_model()
 
     ids, documents, embeddings, metadatas = [], [], [], []
     for row in rows:
